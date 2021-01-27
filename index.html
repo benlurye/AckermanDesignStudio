@@ -1,71 +1,79 @@
 <!DOCTYPE html>
-    
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv=“X-UA-Compatible” content=“ie=edge”>  
-    <link href="style.css" type="text/css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-      <title>Ackerman Design Studio</title>
-  </head>
-    <div class="divider" style="margin-top: 2px;"></div>
-  <header>
-    <h1><span>Ackerman</span> Design Studio</h1>  
-  </header>
-    <div class="index_grid">
-      <div id="home_photo">
-        <img alt="a collection of fabrics" id="fabrics" src="../images/fabricsflitered.jpg">
-      </div>
-      <div id="project_list">
-        <p id="bethesda">Bethesda Bedroom</p>
-        <p id="DC">DC Condo</p>
-        <p id="bklyn">Brooklyn 2-bedroom</p>
-        <p id="wycoff">Florida Bungalow</p>
-      </div>
-    </div>
-  <body>
-    <div class="divider">
-    </div>
-    <div class="about_izzy">
-        <div class="photo">
-            <img src="images/ben-izzy-rehearsal-dinner-55.jpg" width="280px" height="280px" alt="Isabella Ackerman">
-        </div>
-        <div class="bio">
-            <p style=>Brooklyn-based Interior Designer <span>Isabella Ackerman</span> has has led, consulted, and managed the design of living and working spaces in New York, DC, Maryland, Virginia, Florida, and California. A graduate of The George Washington University in Washington DC, Izzy has worked alongside top designers in the nation's capital and New York City.</p>
-            <p>Izzy's husband describes her as “creative without bounds...able to maximize the beauty and comfort of any space, anywhere.” She's also a really great cook and enjoys finding the best restaurants to try, has great taste in shoes, and loves going on adventures both planned and impromptu. She's also cute AF.</p>
-            <p>Her design asthetic will be described here. It's pretty baller but I want her to say it in her own words. Here are some of my own words as a placeholder: car, puppy, iPhone, pillow, string, wallflower, punctual, aftershave, return, mobile, sourpatch, umbrella, movie, low-rider, doorknob, cable car, mushmelon, towel, lampshade, portrait, elephant, worrywart, boomwhacker, courdouroy, dingbat, flerken, groundhog, hampshire, lopsided.</p>
-        </div>
-    </div>
-    <div class="divider">
-    </div>
-    <div class="contact">
-      <h2><span>contact</span> izzy</h2>
-      <form action="action_page.php">
-        <label for="fname">first name</label>
-        <input type="text" id="fname" name="firstname">
-        <label for="lname">last name</label>
-        <input type="text" id="lname" name="lastname">
-        <label for="email">email</label>
-        <input type=email id="email" name="email">
-        <label for="subject">subject</label>
-        <textarea id="subject" name="subject" placeholder="What would you like to discuss?" style="height:200px"></textarea>
-        <input type="submit" value="Submit">
-      </form>
-    </div> 
-    <div class="social">
-      <ul>
-        <li><a href="https://www.pinterest.com/ackermandesignstudio/" target="_blank"><img src="../images/pinterest.png"></a></li>
-        <li><a href="https://www.instagram.com/izz_foshizz/" target="_blank"><img src="../images/instagram.png"></a></li>
-        <li><a href="https://www.linkedin.com/in/izzy-ackerman/" target=_blank'><img src="../images/linkdin.png"></a></li>  
-      </ul>
-    </div>
-    <div class="divider"></div>
-    <footer>
-      <p>&copy;2020 <a href="http://www.benlurye.com/design" target="_blank">Benjamin Lurye</a></p>
-    </footer>
-  <script src="app.js"></script>
-  </body>
-</html> 
- 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADS Style Playground</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  <!-- 1 Playfair -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+  <!-- 2 Nanum Myeongjo -->
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet"> 
+  <!-- 3 Old Standard TT -->
+  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
+  <!-- 4 Cormorant Garamond -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+  <!-- 5 Playfair Display SC -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+  <!-- 6 Vidaloka -->
+  <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+   <!--7 13 Suranna REGULAR AND UPPERCASE -->
+  <link href="https://fonts.googleapis.com/css2?family=Suranna&display=swap" rel="stylesheet"> 
+  <!-- 8 Baskervville -->
+  <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet"> 
+  <!-- 9 Goudy Bookletter 1911 -->
+  <link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap" rel="stylesheet"> 
+  <!-- 10 14 Fanwood Text REGULAR AND UPPERCASE-->
+  <link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap" rel="stylesheet"> 
+  <!-- 11 Bellefair -->
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet"> 
+  <!-- 12 Ibarra Real Nova -->
+  <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+  <!-- 15 Cormorant Unicase (UPPERCASE) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+  <!-- 16 Rozha One UPPERCASE -->
+  <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+  <!-- 17 DM Serif Text UPPERCASE -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet"> 
+  <!-- 18 Marcellus UPPERCASE -->
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+  <!-- 19 Crimson Pro UPPERCASE -->
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+  <!-- 20 Bentham UPPERCASE -->
+  <link href="https://fonts.googleapis.com/css2?family=Bentham&display=swap" rel="stylesheet"> 
+  <!-- 21 Gilda Display UPPERCASE-->
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Ackerman Design Studio</h1>
+  <h2>smaller heading</h2>
+  <p>this is paragragh/descriptive text</p>
+  <div id="blue_square"></div>
+  <div id="plum_square"></div>
+  <ol>
+    <li class="font1">Ackerman Design Studio</li>
+    <li class="font2">Ackerman Design Studio</li>
+    <li class="font3">Ackerman Design Studio</li>
+    <li class="font4">Ackerman Design Studio</li>
+    <li class="font5">Ackerman Design Studio</li>
+    <li class="font6">Ackerman Design Studio</li>
+    <li class="font7">Ackerman Design Studio</li>
+    <li class="font8">Ackerman Design Studio</li>
+    <li class="font9">Ackerman Design Studio</li>
+    <li class="font10">Ackerman Design Studio</li>
+    <li class="font11">Ackerman Design Studio</li>
+    <li class="font12">Ackerman Design Studio</li>
+    <li class="font13">Ackerman Design Studio</li>
+    <li class="font14">Ackerman Design Studio</li>
+    <li class="font15">Ackerman Design Studio</li>
+    <li class="font16">Ackerman Design Studio</li>
+    <li class="font17">Ackerman Design Studio</li>
+    <li class="font18">Ackerman Design Studio</li>
+    <li class="font19">Ackerman Design Studio</li>
+    <li class="font20">Ackerman Design Studio</li>
+    <li class="font21">Ackerman Design Studio</li>
+  </ol>
+  
+</body>
+</html>

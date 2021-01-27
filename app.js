@@ -1,41 +1,44 @@
-var homePhoto = document.getElementById("fabrics");
-var dc = document.getElementById("DC");
-var bethesda = document.getElementById("bethesda");
-var bklyn = document.getElementById("bklyn");
-var wycoff = document.getElementById("wycoff");
+$(document).ready(function() {
+  
+var splashIsGone = false;
+function showBody() {
+  if (splashIsGone == true) {
+    $("#container").animate({
+      opacity: 1
+    }), 1000, function() {
+      }
+    }
+  };
+// ZOOMING
 
-//wycoff mouseover
-wycoff.addEventListener("mouseover", wycoffImage);
-wycoff.addEventListener("mouseout", returnImage);
+  $("#logo").on("click", function (event) {
 
-//dc mouseover
-dc.addEventListener("mouseover", dcImage);
-dc.addEventListener("mouseout", returnImage);
+    // fade box shadow
 
-//brooklyn mouseover
-bklyn.addEventListener("mouseover", brooklynImage);
-bklyn.addEventListener("mouseout", returnImage);
+    $("#logo_box").addClass("box-shadow-fade");
+    $("#logo_box").css("box-shadow", "none");
 
-//bethesda mouseover
-bethesda.addEventListener("mouseover", bethesdaImage);
-bethesda.addEventListener("mouseout", returnImage);
+    // make #logo_text dissapear
 
-function wycoffImage() {
-  homePhoto.src = "../site/images/living_room.JPG";
-};
+    $("#logo_text").animate({
+      opacity: 0.0
+    }, 1000, function() {
+    });
 
-function dcImage() {
-  homePhoto.src = "../site/images/bedroom.JPG";
-};
- 
-function brooklynImage() {
-  homePhoto.src = "../site/images/adelphi299.jpg";
-};
+    // delay the zoom fade until after the text fades out
 
-function bethesdaImage() {
-  homePhoto.src = "../site/images/bethesda.jpg";
-};
- 
-function returnImage() {
-  homePhoto.src = "../site/images/fabricsflitered.jpg";
-};
+    $(this).delay(1000);
+
+    // zoom fade the image and remove #logo_box from the DOM 
+
+    $(this).animate({
+      height: 1195,
+      width: 720,
+      opacity: 0.0
+    }, 2000, function() {
+      $("#logo_box").remove();
+      return splashIsGone = true;
+  });
+    showBody(splashIsGone);
+  });
+});
