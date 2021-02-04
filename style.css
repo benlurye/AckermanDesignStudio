@@ -1,127 +1,20 @@
-body { 
-    background-color: #c2ddf2;
+html {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
 }
+
+
+/* /////////////////////
+SPLASH PAGE 
+//////////////////// */
 
 .white {
     background-color: white;
-    z-index: 99;
-}
-
-#plum_square {
-    height: 100px;
-    width: 100%;
-    background-color: #423760;
-}
-
-#blue_square {
-    height: 100px;
-    width: 100px;
-    background-color: #c2ddf2;
-}
-
-li {
-    font-size: 40px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-}
-
-.font1 {
-    font-family: "Playfair Display";
-}
-
-.font2 {
-    font-family: "Nanum Myeongjo";
-}
-
-.font3 {
-    font-family: "Old Standard TT";
-}
-
-.font4 {
-    font-family: "Cormorant Garamond";
-}
-
-.font5 {
-    font-family: "Playfair Display SC";
-}
-
-.font6 {
-    font-family: "Vidaloka";
-}
-
-.font7 {
-    font-family: "Suranna";
-}
-
-.font8 {
-    font-family: "Baskervville";
-}
-
-.font9 {
-    font-family: "Goudy Bookletter 1911";
-}
-
-.font10 {
-    font-family: "Fanwood Text";
-}
-
-.font11 {
-    font-family: "Bellefair";
-}
-
-.font12 {
-    font-family: "Ibarra Real Nova";
-}
-
-.font13 {
-    font-family: "Suranna";
-    text-transform: uppercase;
-}
-
-.font14 {
-    font-family: "Fanwood Text";
-    text-transform: uppercase;
-}
-
-.font15 {
-    font-family: "Cormorant Unicase";
-    text-transform: uppercase;
-}
-
-.font16 {
-    font-family: "Rozha One";
-    text-transform: uppercase;
-}
-
-.font17 {
-    font-family: "DM Serif Text";
-    text-transform: uppercase;
-}
-
-.font18 {
-    font-family: "Marcellus";
-    text-transform: uppercase;
-}
-
-.font19 {
-    font-family: "Crimson Pro";
-    text-transform: uppercase;
-}
-
-.font20 {
-    font-family: "Bentham";
-    text-transform: uppercase;
-}
-
-.font21 {
-    font-family: "Gilda Display";
-    text-transform: uppercase;
 }
 
 #logo_box {
-    /* -webkit-box-shadow: 11px 11px 40px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 11px 11px 40px -6px rgba(0,0,0,0.75); */
+    -webkit-box-shadow: 11px 11px 40px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 11px 11px 40px -6px rgba(0,0,0,0.75);
     box-shadow: 11px 11px 40px -6px rgba(0,0,0,0.75);
     background-color: white;
     display: flex;
@@ -145,6 +38,191 @@ li {
     transition: .5s;
 }
 
-#container {
-    opacity: 0;
+/* /////////////////
+Header
+//////////////// */
+
+header ul {
+    display: flex;
+    /* border: 1px solid green; */
+    justify-content: space-around;
+}
+
+header ul li a {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+/* ///////////////
+NAV 
+////////////////*/
+
+.nav-desktop {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 1px solid black; */
+}
+
+.nav-mobile {
+    display: none;
+}
+
+.nav-mobile h1 {
+    font-family: "Nanum Myeongjo", serif;
+    color: #423760;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.burger_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 8vh;
+    width: 6vw;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.burger_line {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 90%;
+    background-color: gray;
+    height: 2px;
+}
+
+.nav-mobile img {
+    height: 10vw;
+    width: auto;
+    float: right;
+}
+
+.nav-desktop h1 {
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 4rem;
+    color: #423760;
+}
+
+.nav-desktop h1 span {
+    font-size: 5.1rem;
+}
+
+
+/* //////////////////// 
+CONTAINERS
+/////////////////////*/
+
+
+
+/* //////////////////// 
+Flexbox Setup
+/////////////////////*/
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.col-1,
+.col-2,
+.col-4,
+.col-6,
+.col-8,
+.col-9 {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.col-1 {
+    flex-basis: 8.333333%;
+    /* border: 1px solid black; */
+}
+
+.col-2 {
+    flex-basis: 16.666666%;
+    /* border: 1px solid black; */
+}
+
+.col-4 {
+    flex-basis: 33.333333%;
+    /* border: 1px solid black; */
+}
+
+.col-5 {
+    flex-basis: 41.666666%;
+    /* border: 1px solid black; */
+}
+
+.col-6 {
+    flex-basis: 50%;
+    /* border: 1px solid black; */
+}
+
+.col-8 {
+    flex-basis: 66.6666666%;
+    /* border: 1px solid black; */
+}
+
+.col-9 {
+    flex-basis: 75%;
+}
+
+/* ///////////////////
+STYLE TESTS
+/////////////////// */
+
+#plum_square {
+    height: 100px;
+    width: 100%;
+    background-color: #423760;
+}
+
+#blue_square {
+    height: 100px;
+    width: 100px;
+    background-color: #c2ddf2;
+}
+
+
+/* //////////////////
+MEDIA INQUIRIES
+////////////////// */
+
+
+@media (max-width: 768px) {
+    .nav-desktop {
+        display: none;
+    }
+    
+    .nav-mobile {
+        display: block;
+        width: 100%;
+        margin-top:5px;
+    }
+
+    .nav-mobile h1 {
+        font-size: 4rem;
+        text-align: left;
+    }
+}
+@media (max-width: 576px) {
+    .nav-desktop {
+        display: none;
+    }
+    
+    .nav-mobile {
+        display: block;
+        width: 100%;
+        margin-top:5px;
+    }
+
+    .nav-mobile h1 {
+        font-size: 2.5rem;
+        text-align: left;
+    }
 }
