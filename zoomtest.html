@@ -3,18 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADP JS Playground</title>
-    <link rel="stylesheet" href="/vendor/reset.css">
+    <title>Ackerman Design Studio</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <!-- 2 Nanum Myeongjo -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet"> 
+    <!-- Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+    
+    <!-- css -->
+    <link rel="stylesheet" href="vendor/reset.css">
     <link rel="stylesheet" href="style.css">
+    
     <script src="vendor/jquery.js"></script>
     <script src="app.js"></script>
 </head>
-<body class="white">
-    <div id="logo_box">
-        <!-- <a href="">-->
-        <img id="logo" src="images/ADS Logo.jpg">
-        <!--</a> -->
-        <img id="logo_text" src="images/ADS_Logo_Text.jpg">
-    </div>
+<body>
+    
+
+        <!-- LANDING AREA -->
+
+        <div class="hero">
+            
+            <img id="main_logo" src="images/ADS_Logo_full.jpg">
+            
+        </div>
+
+        <!-- NAV -->
+
+        <div class="container-sticky desktop-nav">
+            <div class="row">
+                <div class="col-3">
+                    home
+                </div>
+                <div class="col-3">
+                    <a href="#about_anchor">about</a>
+                </div>
+                <div class="col-3">
+                    <a href="#gallery_anchor">gallery</a>
+                </div>
+                <div class="col-3">
+                    <a href="#contact_anchor">contact</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT/BIO -->
+
+        <div id="about">
+            <h2 id="about_anchor">About</h2>
+            <div class="row">
+                <div class="col-6">
+                    <img src="images/ben-izzy-rehearsal-dinner-55.jpg" alt="Isabella Ackerman" />
+                </div>
+                <div class="col-6">
+                    <p>Brooklyn-based interior designer Izzy Ackerman enjoys finding unique ways to make each space memorable -- whether through maximizing color, mixing classic and modern architectural elements, or creating beautiful minimalistic concepts to bring life and functionality to every space. </p>
+
+                        <p>Growing up in northern Florida in a family that always placed great value in art and design, Izzy's love of beautiful spaces was fostered from an early age. Later, Izzy moved to Washington, DC to attend the Interior Design program at The George Washington University.</p> 
+                        
+                        <p>After graduating, Izzy quickly began working for top designers in DC and New York, and since then has gone on to lead and consult on the design of residential and office spaces in DC, Maryland, New York, California, Florida, and more.
+                        </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- GALLERY -->
+ 
+        <div id="gallery">
+            <h2 id="gallery_anchor">Gallery</h2>
+            <div class="row">
+                <div class="col-5 img-container">
+                    <img class="gal-img" src="https://via.placeholder.com/400x300/423760/C2DDF2/?text=Gallery+Image">
+                    <h3>Image Caption</h3>
+                </div>
+                <div class="col-2">
+                    <!-- left empty for easy spacing -->
+                </div>
+                <div class="col-5 img-container">
+                    <img class="gal-img" src="https://via.placeholder.com/400x300/423760/C2DDF2/?text=Gallery+Image">
+                    <h3>Image Caption</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-5 img-container">
+                    <img class="gal-img" src="https://via.placeholder.com/400x300/423760/C2DDF2/?text=Gallery+Image">
+                    <h3>Image Caption</h3>
+                </div>
+                <div class="col-2">
+                    <!-- left empty for easy spacing -->
+                </div>
+                <div class="col-5 img-container">
+                    <img class="gal-img" src="https://via.placeholder.com/400x300/423760/C2DDF2/?text=Gallery+Image">
+                    <h3>Image Caption</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-5 img-container">
+                    <img class="gal-img" src="https://via.placeholder.com/400x300/423760/C2DDF2/?text=Gallery+Image">
+                    <h3>Image Caption</h3>
+                </div>
+                <div class="col-2">
+                    <!-- left empty for easy spacing -->
+                </div>
+                <div class="col-5 img-container">
+                    <img class="gal-img" src="https://via.placeholder.com/400x300/423760/C2DDF2/?text=Gallery+Image">
+                    <h3>Image Caption</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-5 img-container">
+                    <img class="gal-img" src="https://via.placeholder.com/400x300/423760/C2DDF2/?text=Gallery+Image">
+                    <h3>Image Caption</h3>
+                </div>
+                <div class="col-2">
+                    <!-- left empty for easy spacing -->
+                </div>
+                <div class="col-5 img-container">
+                    <img class="gal-img" src="https://via.placeholder.com/400x300/423760/C2DDF2/?text=Gallery+Image">
+                    <h3>Image Caption</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT/SOCIAL -->
+        
+        <div id="contact">
+            <h2 id="contact_anchor">Contact/Social</h2>
+            <p>Ackerman Design Studio</p>
+            <p>904-571-9002</p>
+            <p><a href="mailto:admin@ackermandesignstudio.com">admin@ackermandesignstudio.com</a>  --  @ackdesign</p>
+        </div>
+
+       <footer>
+           <p>Created by Benjamin Lurye Web Design (will be subtly linked to my portfolio)</p>
+       </footer> 
+    
+        
 </body>
 </html>
