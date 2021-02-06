@@ -6,6 +6,10 @@
     <title>Ackerman Design Studio</title>
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
+
+    <!-- preload landing image -->
+    <link rel="preload" href="images/living_room.JPG" as="image">
+
     <!-- 2 Nanum Myeongjo -->
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet"> 
     <!-- Roboto -->
@@ -24,8 +28,9 @@
         <!-- LANDING AREA -->
 
         <div class="hero">
+            <img id="landing_image" src="images/living_room.JPG" alt="describe the photo here"/>
             
-            <img id="main_logo" src="images/ADS_Logo_full.jpg">
+            <img id="main_logo" src="images/ADS_Logo_full.jpg" alt="Ackerman Design Studio" />
             
         </div>
 
@@ -33,11 +38,14 @@
 
         <div class="container-sticky desktop-nav">
             <div class="row">
-                <div class="col-3">
-                    home
+                <div class="col-1">
+                    <img id ="nav_logo" src="images/ADS_Logo_full.jpg" alt="Ackerman Design Studio">
+                </div>
+                <div class="col-2">
+                    <a href="#about_anchor">about</a>
                 </div>
                 <div class="col-3">
-                    <a href="#about_anchor">about</a>
+                    <a href="">how it works</a>
                 </div>
                 <div class="col-3">
                     <a href="#gallery_anchor">gallery</a>

@@ -1,7 +1,13 @@
 $(document).ready(function() {
+
+$(window).on('load', function () {
   
-$("#main_logo").mouseover(function () {
-  $("#hero").css("opacity", "1");
+  $("#landing_image").delay(1000).animate({
+    opacity: 1.0
+  }, 450, function()
+  {
+    
+  });
 });
 
 });
