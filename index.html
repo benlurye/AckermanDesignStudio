@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ackerman Design Studio</title>
-    
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
+
+    <!-- preload landing image -->
+    <link rel="preload" href="images/big_painting.jpg" as="image">
+
     <!-- 2 Nanum Myeongjo -->
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet"> 
-    <!-- Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+    <!-- Open Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
     
     <!-- css -->
     <link rel="stylesheet" href="vendor/reset.css">
@@ -18,14 +21,17 @@
     
     <script src="vendor/jquery.js"></script>
     <script src="app.js"></script>
+
 </head>
 <body>
-   
-       <!-- LANDING AREA -->
+    
+
+        <!-- LANDING AREA -->
 
         <div class="hero">
+            <img id="landing_image" src="images/big_painting.jpg" alt="describe the photo here"/>
             
-            <img id="main_logo" src="images/ADS_Logo_full.jpg">
+            <img id="main_logo" src="images/ADS_Logo_full.jpg" alt="Ackerman Design Studio" />
             
         </div>
 
@@ -33,15 +39,21 @@
 
         <div class="container-sticky desktop-nav">
             <div class="row">
-                <div class="col-3">
-                    home
+                <div class="col-1">
+                    <img id ="nav_logo" src="images/ADS_Logo_full.jpg" alt="Ackerman Design Studio">
                 </div>
-                <div class="col-3">
+                
+                <div class="col-2">
                     <a href="#about_anchor">about</a>
                 </div>
+                
                 <div class="col-3">
                     <a href="#gallery_anchor">gallery</a>
                 </div>
+                <div class="col-3">
+                    <a href="#how_it_works_anchor">how we work</a>
+                </div>
+                
                 <div class="col-3">
                     <a href="#contact_anchor">contact</a>
                 </div>
@@ -129,18 +141,78 @@
         </div>
 
         <!-- CONTACT/SOCIAL -->
-        
+
         <div id="contact">
-            <h2 id="contact_anchor">Contact/Social</h2>
+            <h2 id="contact_anchor">contact us</h2>
+            <form id="contact_form">
+                <div class="row">
+                    <div class="col-4">
+                        <label>Name *</label>
+                    </div>
+                    <div class="col-8">
+                        <input id="name" type="text" placeholder="Jimmy Choo" required />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Email *</label>
+                    </div>
+                    <div class="col-8">
+                        <input id="email" type="email" placeholder="jimmy@fancyshoes.net" required />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Phone</label>
+                    </div>
+                    <div class="col-8">
+                        <input id="phone_number" type="tel" placeholder="(123) 456-7890" />
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-4">
+                        <label>What can we do for you?</label>
+                    </div>
+                    <div class="col-8">
+                        <ul>
+                            <li><input type="checkbox" name="design" id="design"><label>Home design</label></li>
+                            <li><input type="checkbox" name="consult" id="consult"><label>Just a quick consult</label></li>
+                            <li><input type="checkbox" name="mailing_list" id="mailing_list"><label>Add me to your mailing list</label></li>
+                            <li><input type="checkbox" name="other" id="other"><label>Other</label></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Message</label>
+                    </div>
+                    <div class="col-8">
+                        <textarea id="contact_message" placeholder="Your message here!"></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <!-- intentionally empty -->
+                    </div>
+                    <div class="col-8">
+                        <button class="submit_button">submit</button>
+                    </div>
+                </div>
+            </form>
             <p>Ackerman Design Studio</p>
             <p>904-571-9002</p>
-            <p><a href="mailto:admin@ackermandesignstudio.com">admin@ackermandesignstudio.com</a>  --  @ackdesign</p>
+            <p><a href="mailto:hello@ackermandesignstudio.com">hello@ackermandesignstudio.com</a>  --  @ackdesign</p>
         </div>
 
        <footer>
            <p>Created by Benjamin Lurye Web Design (will be subtly linked to my portfolio)</p>
        </footer> 
-
+    
         
 </body>
 </html>

@@ -4,9 +4,23 @@
 
 html {
     font-size: 10px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Open Sans", sans-serif;
     color: #423760;
     scroll-padding-top: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #423760;
+}
+
+a:hover {
+    color: black;
+    transition: .25s;
+}
+
+a:active {
+    color: #c2dfc2;
 }
 
 /* /////////////////
@@ -15,7 +29,7 @@ Landing Area
 
 .hero {
     width: 100%;
-    height: 85vh;
+    height: 95vh;
 }
 
 #landing_image {
@@ -23,7 +37,7 @@ Landing Area
     top: 0;
     left: 0;
     width: 100%;
-    height: 85vh;
+    height: 95vh;
     opacity: 0;
 }
 
@@ -49,111 +63,6 @@ Landing Area
 }
 
 
-/* ///////////////
-NAV 
-////////////////*/
-
-.desktop-nav {
-    font-size: 2rem;
-    height: 15vh;
-    margin-bottom: 100px;
-    background-color: white;
-    padding-top: 5px;
-    -webkit-box-shadow: 0px 2px 28px 5px rgba(255,255,255,0.53); 
-    box-shadow: 0px 2px 28px 5px rgba(255,255,255,0.53);
-}
-
-.container-sticky {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0px;
-}
-
-#nav_logo {
-    height: 15vh;
-    padding-bottom: 5px;
-}
-
-
-/* //////////////////// 
-CONTAINERS
-/////////////////////*/
-
-#about {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 980px;
-    margin-bottom: 100px;
-}
-
-#about h2, #gallery h2, #contact h2 {
-    text-align: center;
-    font-size: 3rem;
-    font-family: "Nanum Myeongjo", serif;
-    padding-bottom: 100px;
-    text-transform: uppercase;
-}
-
-#about img {
-    max-width: 300px;
-    max-height: 300px;
-    /* border-radius: 50%; */
-    margin-right: auto;
-    margin-left: auto;
-}
-
-#about p, #contact p {
-    font-size: 1.5rem;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    line-height: 2rem;
-}
-
-#gallery {
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
-    max-width: 980px;
-    margin-bottom: 100px;
-}
-
-#gallery .row {
-    margin-bottom: 25px;
-}
-
-.img-container {
-    /* images are inline, so can be centered by applying text-align to their container: */
-    /* but this may be redundant with flexbox */
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.img-container h3 {
-    font-size: 3rem;
-    margin-top: 5px;
-}
-
-#contact {
-    width: 100%;
-    max-width: 980px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 100px;
-}
-
-footer {
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
-    max-width: 980px;
-}
-
-footer p {
-    margin-left: 10px;
-}
 
 /* //////////////////// 
 Flexbox Setup
@@ -179,6 +88,7 @@ Flexbox Setup
 .col-1 {
     flex-basis: 8.333333%;
     /* border: 1px solid black; */
+    overflow: visible;
 }
 
 .col-2 {
@@ -216,6 +126,209 @@ Flexbox Setup
     flex-basis: 75%;
     /* border: 1px solid black; */
 }
+
+/* ///////////////
+NAV 
+////////////////*/
+
+.desktop-nav {
+    /* overflow: hidden; */
+    font-size: 2rem;
+    height: 5vh;
+    margin-bottom: 100px;
+    background-color: white;
+    padding-top: 5px;
+    -webkit-box-shadow: 0px 2px 28px 5px rgba(255,255,255,0.53); 
+    box-shadow: 0px 2px 28px 5px rgba(255,255,255,0.53);
+}
+
+.desktop-nav .row {
+    align-items: flex-start;
+}
+
+.desktop-nav .col-2,
+.desktop-nav .col-3 {
+    text-align: right;
+}
+
+.desktop-nav .col-3:last-of-type {
+    margin-right: 10px;
+}
+
+.container-sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+}
+
+#nav_logo {
+    display: none;
+    height: 20vh;
+    /* padding-bottom: 5px; */
+    margin-left: 20px;
+}
+
+.in-view {
+    display: block;
+}
+
+
+/* //////////////////// 
+CONTAINERS
+/////////////////////*/
+
+#about {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 980px;
+    margin-bottom: 100px;
+}
+
+#about h2, #gallery h2, #contact h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Nanum Myeongjo", serif;
+    padding-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#about img {
+    max-width: 300px;
+    max-height: 300px;
+    /* border-radius: 50%; */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#about p, #contact p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 2rem;
+}
+
+#gallery {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 980px;
+    margin-bottom: 100px;
+}
+
+#gallery .row {
+    margin-bottom: 25px;
+}
+
+.img-container {
+    /* images are inline items, so can be centered by applying text-align to their container: */
+    /* but this may be redundant with flexbox */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container h3 {
+    font-size: 3rem;
+    margin-top: 5px;
+}
+
+#contact_form {
+    text-align: left;
+}
+
+#contact {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+footer {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 980px;
+}
+
+footer p {
+    margin-left: 10px;
+}
+
+/* /////////////////////
+CONTACT FORM
+///////////////////// */
+
+#contact {
+    /* border: 2px solid #423760; */
+    /* border-radius: 10px; */
+    text-align: center;
+    padding: 20px;
+}
+
+#contact p {
+    font-size: 1.5rem;
+    line-height: 10px;
+
+}
+
+#contact .row {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#contact label {
+    font-size: 1.5rem;
+}
+
+#contact label span {
+    font-size: 1rem;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel] {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #423760;
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+}
+
+textarea {
+    border: 2px solid #423760;
+    /* border-radius: 10px; */
+    /* background-color: #c2ddf2; */
+    /* border: none; */
+    width: 100%;
+    height: 100px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    padding-left: 5px;
+}
+
+#contact ul li {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+button {
+    width: 100%;
+    background-color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    border: 2px solid #c2ddf2;
+    /* border-radius: 10px; */
+    padding: 10px 20px 10px 20px;
+}
+
+button:hover {
+    border: 2px solid #423760;
+    transition: .25s;
+}
+
 
 /* //////////////////
 MEDIA INQUIRIES
