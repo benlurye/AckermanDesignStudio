@@ -25,15 +25,34 @@ $(document).ready(function() {
 
   $(".nav_logo").hide();
 
-
+// write else if statements to keep it alive?? for #gallery, #guide, #contact...
   
   $(window).on('resize scroll', function() {
     if ($('#about_anchor').isInViewport()) {
       $(".nav_logo").fadeIn(250);
       console.log("hello")
+    } else if ($('#gallery').isInViewport()) {
+      return;
+    } else if ($('#guide').isInViewport()) {
+      return;
+    } else if ($('#contact').isInViewport()) {
+      return;
     } else {
       $(".nav_logo").fadeOut(250);
     }
 });
+
+
+// Hamburger mobile menu by Jonathan Suh
+  var $mobileNav = $(".mobile-nav-choices");
+  var $hamburger = $(".hamburger");
+  $hamburger.on("click", function(e) {
+    $hamburger.toggleClass("is-active");
+    // console.log("the button toggled");
+    // Do something else, like open/close menu
+    $mobileNav.toggleClass("active-nav");
+
+  });
+
 
 });

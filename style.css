@@ -9,6 +9,7 @@ html {
     font-family: "Open Sans", sans-serif;
     color: #423760;
     scroll-padding-top: 50px;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -23,6 +24,12 @@ a:hover {
 
 a:active {
     color: #c2dfc2;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: "Nanum Myeongjo", serif;
 }
 
 h2 {
@@ -139,9 +146,49 @@ Flexbox Setup
     /* border: 1px solid black; */
 }
 
+.center-this {
+    text-align: center;
+}
+
 /* ///////////////
 NAV 
 ////////////////*/
+
+.mobile-nav {
+    display: none;
+    background-color: #b7aed0;
+}
+
+.mobile-nav-choices {
+    display: none;
+}
+
+.active-nav {
+    display: block;
+}
+
+.mobile-nav-link {
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid #b7aed0;
+    border-bottom: 1px solid #b7aed0;
+    background-color: #423760;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.mobile-nav-link:last-child {
+    border-bottom: 2px solid #b7aed0;
+}
+
+.mobile-nav-link span {
+    font-family: "Nanum Myeongjo", serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #b7aed0;
+    text-align: center;
+   
+}
 
 .desktop-nav {
     /* overflow: hidden; */
@@ -161,9 +208,10 @@ NAV
 .desktop-nav .col-2,
 .desktop-nav .col-3 {
     text-align: right;
+    /* border: 1px solid black; */
 }
 
-.desktop-nav .col-3:last-of-type {
+.desktop-nav .col-2 {
     margin-right: 10px;
 }
 
@@ -182,6 +230,10 @@ NAV
 
 .in-view {
     display: block;
+}
+
+.transparant {
+    opacity: 0;
 }
 
 
@@ -311,7 +363,7 @@ textarea {
     padding-bottom: 2px;
 }
 
-button {
+.submit_button {
     width: 100%;
     background-color: white;
     font-family: "Open Sans", sans-serif;
@@ -321,7 +373,7 @@ button {
     padding: 10px 20px 10px 20px;
 }
 
-button:hover {
+.submit_button:hover {
     border: 2px solid #423760;
     transition: .25s;
 }
@@ -330,3 +382,32 @@ button:hover {
 /* //////////////////
 MEDIA INQUIRIES
 ////////////////// */
+
+@media (max-width:768px) {
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .hero {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    #about .row, #gallery .row, #guide .row {
+        flex-direction: column;
+    }
+
+    #about p, #gallery p, #guide p {
+        text-align: center;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    #about h2 {
+        padding-top: 20px;
+    }
+}

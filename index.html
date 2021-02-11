@@ -18,6 +18,8 @@
     <!-- css -->
     <link rel="stylesheet" href="vendor/reset.css">
     <link rel="stylesheet" href="style.css">
+    <link href="vendor/hamburger.css" rel="stylesheet"> <!--Hamburgers by Jonathan Suh-->
+
 
     <!-- JS -->
     <script src="vendor/jquery.js"></script>
@@ -41,23 +43,52 @@
         <div class="container-sticky desktop-nav">
             <div class="row">
                 <div class="col-1">
-                    <img class="nav_logo" src="images/ADS_Logo_full.jpg" alt="Ackerman Design Studio">
+                    <a href="#top"><img class="nav_logo" src="images/ADS_Logo_full.jpg" alt="Ackerman Design Studio"></a>
                 </div>
-                
+
+                <div class="col-3 transparant">
+                    <!-- intentionally empty -->
+                </div>
+                <!-- I may have to refactor this into a ul -->
                 <div class="col-2">
                     <a href="#about_anchor">about</a>
                 </div>
                 
-                <div class="col-3">
+                <div class="col-2">
                     <a href="#gallery_anchor">gallery</a>
                 </div>
-                <div class="col-3">
-                    <a href="#how_it_works_anchor">how we work</a>
+                <div class="col-2">
+                    <a href="#guide">how we work</a>
                 </div>
                 
-                <div class="col-3">
+                <div class="col-2">
                     <a href="#contact_anchor">contact</a>
                 </div>
+            </div>
+        </div>
+
+        <div class="container-sticky mobile-nav">
+            <div class="row">
+                <div class="col-2 center-this">
+                    <img class="nav_logo_mobile" src="images/ADS_Logo_mobile.jpg" alt="Ackerman Design Studio">
+                </div>
+                <div class="col-8">
+                    <h1>Ackerman Design Studio</h1>   
+                </div>
+                <div class="col-2 center-this">
+                    <button class="hamburger hamburger--squeeze" type="button">
+                        <span class="hamburger-box">
+                          <span class="hamburger-inner"></span>
+                        </span>
+                      </button>
+                      
+                </div>
+            </div>
+            <div class="mobile-nav-choices">
+                <div class="mobile-nav-link"><a href="#about_anchor">About</a></div>
+                <div class="mobile-nav-link"><a href="#gallery_anchor">Gallery</a></div>
+                <div class="mobile-nav-link"><a href="#guide_anchor">How it works</a></div>
+                <div class="mobile-nav-link"><a href="#contact_anchor">Contact</a></div>
             </div>
         </div>
 
