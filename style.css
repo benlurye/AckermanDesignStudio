@@ -36,16 +36,18 @@ h2 {
     text-align: center;
     font-size: 3rem;
     font-family: "Nanum Myeongjo", serif;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     text-transform: uppercase;
 }
-
 
 /* /////////////////
 Landing Area
 //////////////// */
 
 .hero {
+    background-color: #c2ddf2;
     width: 100%;
     height: 95vh;
 }
@@ -156,11 +158,14 @@ NAV
 
 .mobile-nav {
     display: none;
-    background-color: #b7aed0;
+    /* background-color: #b7aed0; */
+    background: url(images/mobile_nav_bg.jpg);
 }
 
 .mobile-nav-choices {
     display: none;
+    /* transform: translateX(50%); */
+    
 }
 
 .active-nav {
@@ -172,22 +177,20 @@ NAV
     width: 100%;
     border-top: 1px solid #b7aed0;
     border-bottom: 1px solid #b7aed0;
-    background-color: #423760;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .mobile-nav-link:last-child {
-    border-bottom: 2px solid #b7aed0;
+    border-bottom: 2px solid white;
 }
 
-.mobile-nav-link span {
-    font-family: "Nanum Myeongjo", serif;
+.mobile-nav-link a {
+    font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
-    font-size: 1.5rem;
-    color: #b7aed0;
-    text-align: center;
-   
+    font-size: 2rem;
+    color: white;   
 }
 
 .desktop-nav {
@@ -242,6 +245,11 @@ CONTAINERS
 /////////////////////*/
 
 
+#body_container {
+    /* background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(66,55,96,1) 35%, rgba(183,174,208,1) 100%); */
+}
+
 #about img {
     max-width: 300px;
     max-height: 300px;
@@ -263,6 +271,7 @@ CONTAINERS
     width: 100%;
     max-width: 980px;
     margin-bottom: 100px;
+    background-color:
 }
 
 #gallery .row {
@@ -280,6 +289,7 @@ CONTAINERS
 .img-container h3 {
     font-size: 3rem;
     margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 #contact_form {
@@ -403,11 +413,12 @@ MEDIA INQUIRIES
 
     #about p, #gallery p, #guide p {
         text-align: center;
-        padding-right: 10px;
-        padding-left: 10px;
+        padding-right: 15px;
+        padding-left: 15px;
     }
 
     #about h2 {
         padding-top: 20px;
     }
+
 }

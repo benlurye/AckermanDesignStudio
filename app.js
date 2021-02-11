@@ -3,7 +3,7 @@ $(document).ready(function() {
   // hero image fade-in on load
   // //////////////////
   
-  $("#landing_image").hide().delay(500).fadeIn(1250, function () {
+  $("#landing_image").hide().delay(400).fadeIn(1000, function () {
     console.log("hello from fade-in")
   });
   
@@ -23,9 +23,12 @@ $(document).ready(function() {
 };
 
 
+// hide .nav_logo on load to avoid weird clipping
+
   $(".nav_logo").hide();
 
-// write else if statements to keep it alive?? for #gallery, #guide, #contact...
+// show .nav_logo when #about_anchor scrolls into view
+// and keep it there unless we scroll back to the top
   
   $(window).on('resize scroll', function() {
     if ($('#about_anchor').isInViewport()) {
@@ -45,14 +48,22 @@ $(document).ready(function() {
 
 // Hamburger mobile menu by Jonathan Suh
   var $mobileNav = $(".mobile-nav-choices");
+  var $mobileLinks = $(".mobile-nav-link");
   var $hamburger = $(".hamburger");
+
+  // hamburger navigation effect
   $hamburger.on("click", function(e) {
     $hamburger.toggleClass("is-active");
-    // console.log("the button toggled");
-    // Do something else, like open/close menu
-    $mobileNav.toggleClass("active-nav");
 
+    // open/close menu
+    $mobileNav.toggleClass("active-nav");
   });
+
+  // mobile links dissapear on link click/tap
+  $mobileLinks.on("click", function(e) {
+    $mobileNav.toggleClass("active-nav");
+  });
+
 
 
 });
