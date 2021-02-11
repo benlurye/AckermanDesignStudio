@@ -2,6 +2,8 @@
     box-sizing: border-box;
 }
 
+/* #b7aed0--lighter purple */
+
 html {
     font-size: 10px;
     font-family: "Open Sans", sans-serif;
@@ -15,13 +17,22 @@ a {
 }
 
 a:hover {
-    color: black;
+    color: #b7aed0;
     transition: .25s;
 }
 
 a:active {
     color: #c2dfc2;
 }
+
+h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Nanum Myeongjo", serif;
+    padding-bottom: 50px;
+    text-transform: uppercase;
+}
+
 
 /* /////////////////
 Landing Area
@@ -177,21 +188,6 @@ NAV
 CONTAINERS
 /////////////////////*/
 
-#about {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 980px;
-    margin-bottom: 100px;
-}
-
-#about h2, #gallery h2, #contact h2 {
-    text-align: center;
-    font-size: 3rem;
-    font-family: "Nanum Myeongjo", serif;
-    padding-bottom: 50px;
-    text-transform: uppercase;
-}
 
 #about img {
     max-width: 300px;
@@ -201,14 +197,14 @@ CONTAINERS
     margin-left: auto;
 }
 
-#about p, #contact p {
+#about p, #contact p, #guide p {
     font-size: 1.5rem;
     margin-top: 20px;
     margin-bottom: 20px;
     line-height: 2rem;
 }
 
-#gallery {
+#about, #gallery, #guide {
     margin-right: auto;
     margin-left: auto;
     width: 100%;
