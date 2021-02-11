@@ -1,47 +1,39 @@
 $(document).ready(function() {
-
+  ////////////////////
   // hero image fade-in on load
-    $(document).on('load', function () {
-    
-    $("#landing_image").delay(500).animate({
-      opacity: 1.0
-    }, 500, function()
-    {
-      
-    });
+  // //////////////////
+  
+  $("#landing_image").hide().delay(500).fadeIn(1250, function () {
+    console.log("hello from fade-in")
   });
+  
+  ///////////////////
+  // Checking if an element is in the viewport by Tom Pažourek 
+  // https://stackoverflow.com/questions/20791374/jquery-check-if-element-is-visible-in-viewport#:~:text=Check%20if%20element%20is%20visible%20in%20viewport%20using%20jquery%3A,position%20to%20the%20viewport%20height
+  // ///////////////
+  
+  $.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
 
 
-  // mini-logo appear on scroll 
+  $(".nav_logo").hide();
 
 
-  //Cache reference to window and animation items
-  var $animation_elements = $('.animation-element');
-  var $window = $(window);
-
-  $window.on('scroll', check_if_in_view);
-  $window.on('scroll resize', check_if_in_view);
-  $window.trigger('scroll');
-
-  function check_if_in_view() {
-    var window_height = $window.height();
-    var window_top_position = $window.scrollTop();
-    var window_bottom_position = (window_top_position + window_height);
-
-    $.each($animation_elements, function() {
-      var $element = $(this);
-      var element_height = $element.outerHeight();
-      var element_top_position = $element.offset().top;
-      var element_bottom_position = (element_top_position + element_height);
-
-      //check to see if this current container is within viewport
-      if ((element_bottom_position >= window_top_position) &&
-          (element_top_position <= window_bottom_position)) {
-        $element.addClass('in-view');
-      } else {
-        $element.removeClass('in-view');
-      }
-    });
-  }
+  
+  $(window).on('resize scroll', function() {
+    if ($('#about_anchor').isInViewport()) {
+      $(".nav_logo").fadeIn(250);
+      console.log("hello")
+    } else {
+      $(".nav_logo").fadeOut(250);
+    }
+});
 
 });
