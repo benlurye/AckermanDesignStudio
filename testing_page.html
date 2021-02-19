@@ -17,9 +17,11 @@
     <!-- css -->
     <link rel="stylesheet" href="vendor/reset.css">
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="vendor/magnific-popup.css"> -->
     
     <script src="vendor/jquery.js"></script>
     <script src="app.js"></script>
+    <!-- <script src="vendor/magnific-popup-min.js"></script> -->
 
     <!-- preload landing image -->
     <link rel="preload" href="images/big_painting.jpg" as="image">
@@ -27,194 +29,9 @@
 </head>
 <body>
     
-
-        <!-- LANDING AREA -->
-
-        <div class="hero">
-            <img id="landing_image" src="images/big_painting.jpg" alt="describe the photo here"/>
-            
-            <img id="main_logo" src="images/ADS_Logo_full.jpg" alt="Ackerman Design Studio" />
-            
-        </div>
-
-        <!-- NAV -->
-
-        <div class="container-sticky desktop-nav">
-            <div class="row">
-                <div class="col-1">
-                    <img id ="nav_logo" src="images/ADS_Logo_full.jpg" alt="Ackerman Design Studio">
-                </div>
-                
-                <div class="col-2">
-                    <a href="#about_anchor">about</a>
-                </div>
-                
-                <div class="col-3">
-                    <a href="#gallery_anchor">gallery</a>
-                </div>
-                <div class="col-3">
-                    <a href="#how_it_works_anchor">how we work</a>
-                </div>
-                
-                <div class="col-3">
-                    <a href="#contact_anchor">contact</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- ABOUT/BIO -->
-
-        <div id="about">
-            <h2 id="about_anchor">About</h2>
-            <div class="row">
-                <div class="col-6">
-                    <img src="images/ben-izzy-rehearsal-dinner-55.jpg" alt="Isabella Ackerman" />
-                </div>
-                <div class="col-6">
-                    <p>Brooklyn-based interior designer Izzy Ackerman enjoys finding unique ways to make each space memorable -- whether through maximizing color, mixing classic and modern architectural elements, or creating beautiful minimalistic concepts to bring life and functionality to every space. </p>
-
-                        <p>Growing up in northern Florida in a family that always placed great value in art and design, Izzy's love of beautiful spaces was fostered from an early age. Later, Izzy moved to Washington, DC to attend the Interior Design program at The George Washington University.</p> 
-                        
-                        <p>After graduating, Izzy quickly began working for top designers in DC and New York, and since then has gone on to lead and consult on the design of residential and office spaces in DC, Maryland, New York, California, Florida, and more.
-                        </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- GALLERY -->
- 
-        <div id="gallery">
-            <h2 id="gallery_anchor">Gallery</h2>
-            <div class="row">
-                <div class="col-5 img-container">
-                    <img class="gal-img" src="https://via.placeholder.com/400x300/423760/C2DDF2/?text=Gallery+Image">
-                    <h3>Image Caption</h3>
-                </div>
-                <div class="col-2">
-                    <!-- left empty for easy spacing -->
-                </div>
-                <div class="col-5 img-container">
-                    <img class="gal-img" src="https://via.placeholder.com/400x300/423760/C2DDF2/?text=Gallery+Image">
-                    <h3>Image Caption</h3>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-5 img-container">
-                    <img class="gal-img" src="https://via.placeholder.com/400x300/423760/C2DDF2/?text=Gallery+Image">
-                    <h3>Image Caption</h3>
-                </div>
-                <div class="col-2">
-                    <!-- left empty for easy spacing -->
-                </div>
-                <div class="col-5 img-container">
-                    <img class="gal-img" src="https://via.placeholder.com/400x300/423760/C2DDF2/?text=Gallery+Image">
-                    <h3>Image Caption</h3>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-5 img-container">
-                    <img class="gal-img" src="https://via.placeholder.com/400x300/423760/C2DDF2/?text=Gallery+Image">
-                    <h3>Image Caption</h3>
-                </div>
-                <div class="col-2">
-                    <!-- left empty for easy spacing -->
-                </div>
-                <div class="col-5 img-container">
-                    <img class="gal-img" src="https://via.placeholder.com/400x300/423760/C2DDF2/?text=Gallery+Image">
-                    <h3>Image Caption</h3>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-5 img-container">
-                    <img class="gal-img" src="https://via.placeholder.com/400x300/423760/C2DDF2/?text=Gallery+Image">
-                    <h3>Image Caption</h3>
-                </div>
-                <div class="col-2">
-                    <!-- left empty for easy spacing -->
-                </div>
-                <div class="col-5 img-container">
-                    <img class="gal-img" src="https://via.placeholder.com/400x300/423760/C2DDF2/?text=Gallery+Image">
-                    <h3>Image Caption</h3>
-                </div>
-            </div>
-        </div>
-
-        <!-- CONTACT/SOCIAL -->
-
-        <div id="contact">
-            <h2 id="contact_anchor">contact us</h2>
-            <form id="contact_form">
-                <div class="row">
-                    <div class="col-4">
-                        <label>Name *</label>
-                    </div>
-                    <div class="col-8">
-                        <input id="name" type="text" placeholder="Jimmy Choo" required />
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-4">
-                        <label>Email *</label>
-                    </div>
-                    <div class="col-8">
-                        <input id="email" type="email" placeholder="jimmy@fancyshoes.net" required />
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-4">
-                        <label>Phone</label>
-                    </div>
-                    <div class="col-8">
-                        <input id="phone_number" type="tel" placeholder="(123) 456-7890" />
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-4">
-                        <label>What can we do for you?</label>
-                    </div>
-                    <div class="col-8">
-                        <ul>
-                            <li><input type="checkbox" name="design" id="design"><label>Home design</label></li>
-                            <li><input type="checkbox" name="consult" id="consult"><label>Just a quick consult</label></li>
-                            <li><input type="checkbox" name="mailing_list" id="mailing_list"><label>Add me to your mailing list</label></li>
-                            <li><input type="checkbox" name="other" id="other"><label>Other</label></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-4">
-                        <label>Message</label>
-                    </div>
-                    <div class="col-8">
-                        <textarea id="contact_message" placeholder="I want my whoooole house designed by you!"></textarea>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-4">
-                        <!-- intentionally empty -->
-                    </div>
-                    <div class="col-8">
-                        <button class="submit_button">submit</button>
-                    </div>
-                </div>
-            </form>
-            <p>Ackerman Design Studio</p>
-            <p>904-571-9002</p>
-            <p><a href="mailto:hello@ackermandesignstudio.com">hello@ackermandesignstudio.com</a>  --  @ackdesign</p>
-        </div>
-
-       <footer>
-           <p>Created by Benjamin Lurye Web Design (will be subtly linked to my portfolio)</p>
-       </footer> 
+          <div id="test_target"></div>
     
+    </a>
         
 </body>
 </html>

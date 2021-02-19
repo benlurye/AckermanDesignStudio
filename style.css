@@ -12,9 +12,20 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+  --c : rgba(255,255,255,0.7);
+  --t : transparent;
+}
+
+/* #body_container_gradient {
+    background: rgb(66,56,96);
+    background: linear-gradient(180deg, rgba(66,56,96,1) 0%, rgba(194,221,242,1) 100%);
+} */
+
 a {
     text-decoration: none;
     color: #423760;
+    transition: .25s;
 }
 
 a:hover {
@@ -23,7 +34,7 @@ a:hover {
 }
 
 a:active {
-    color: #c2dfc2;
+    color: #c2ddf2;
 }
 
 h1 {
@@ -47,7 +58,7 @@ Landing Area
 //////////////// */
 
 .hero {
-    background-color: #c2ddf2;
+    /* background-color: #c2ddf2; */
     width: 100%;
     height: 95vh;
 }
@@ -64,7 +75,6 @@ Landing Area
 
 #main_logo {
     position: absolute;
-    
     top: 50%;
     left: 50%;
     margin-left: -72px;
@@ -73,6 +83,7 @@ Landing Area
     -moz-box-shadow: 11px 11px 40px -6px rgba(0,0,0,0.75);
     box-shadow: 11px 11px 40px -6px rgba(0,0,0,0.75);
     border: 1px solid #423760;
+    transition: .7s;
 }
 
 #main_logo:hover {
@@ -244,10 +255,15 @@ NAV
 CONTAINERS
 /////////////////////*/
 
-
-#body_container {
-    /* background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(66,55,96,1) 35%, rgba(183,174,208,1) 100%); */
+.body-container {
+    width: 100%;
+    /* border: 2px solid blue; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: 
+      repeating-linear-gradient(45deg, var(--c) 0, var(--c) 20px, var(--t) 20px, var(--t) 32px, var(--c) 32px, var(--c) 44px, var(--t) 44px, var(--t) 56px, var(--c) 56px, var(--c) 68px, var(--t) 68px, var(--t) 80px, var(--c) 0),
+      repeating-linear-gradient(-45deg, var(--c) 0, var(--c) 20px, var(--t) 20px, var(--t) 32px, var(--c) 32px, var(--c) 44px, var(--t) 44px, var(--t) 56px, var(--c) 56px, var(--c) 68px, var(--t) 68px, var(--t) 80px, var(--c) 0),
+      linear-gradient(to bottom right, #423760, #c2ddf2);    
 }
 
 #about img {
@@ -271,11 +287,26 @@ CONTAINERS
     width: 100%;
     max-width: 980px;
     margin-bottom: 100px;
-    background-color:
+    padding: 10px 20px;
+    /* border: 1px solid #423760; */
 }
 
 #gallery .row {
     margin-bottom: 25px;
+}
+
+.gal-img {
+    max-width: 400px;
+    max-height: 200px;
+    overflow: hidden;
+}
+
+/* .bordered_section {
+    border: 1px solid #423760;
+} */
+
+.opaque {
+    background: #FFFFFF;
 }
 
 .img-container {
@@ -310,6 +341,7 @@ footer {
     margin-left: auto;
     width: 100%;
     max-width: 980px;
+    padding-bottom: 5px;
 }
 
 footer p {
@@ -381,6 +413,7 @@ textarea {
     border: 2px solid #c2ddf2;
     /* border-radius: 10px; */
     padding: 10px 20px 10px 20px;
+    transition: .25s;
 }
 
 .submit_button:hover {
@@ -421,4 +454,29 @@ MEDIA INQUIRIES
         padding-top: 20px;
     }
 
+}
+
+/* FOR TESTING */
+
+#test_target {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+    border: 1px solid papayawhip;
+    background-color: darkblue;
+    margin-top: 200px;
+}
+
+.photo_module {
+    position: absolute;
+    transform: translateX(50%);
+    transform: translateY(50%);
+    width: 500px;
+    height: 500px;
+    background-color: plum;
+    border: 2px solid forestgreen;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
 }
