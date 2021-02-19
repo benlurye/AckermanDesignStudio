@@ -3,7 +3,7 @@ $(document).ready(function() {
   // hero image fade-in on load
   // //////////////////
   
-  $("#landing_image").hide().delay(400).fadeIn(1000, function () {
+  $("#landing_image").hide().delay(1000).fadeIn(1500, function () {
     console.log("hello from fade-in")
   });
   

@@ -171,6 +171,8 @@ NAV
     display: none;
     /* background-color: #b7aed0; */
     background: url(images/mobile_nav_bg.jpg);
+    -webkit-box-shadow: 0 .25rem .25rem rgba(0,0,0.3); 
+    box-shadow: 0 .25rem .25rem rgba(0,0,0,.3);
 }
 
 .mobile-nav-choices {
@@ -211,8 +213,8 @@ NAV
     margin-bottom: 100px;
     background-color: white;
     padding-top: 5px;
-    -webkit-box-shadow: 0px 2px 28px 5px rgba(255,255,255,0.53); 
-    box-shadow: 0px 2px 28px 5px rgba(255,255,255,0.53);
+    -webkit-box-shadow: 0 .25rem .25rem rgba(0,0,0.3); 
+    box-shadow: 0 .25rem .25rem rgba(0,0,0,.3);
 }
 
 .desktop-nav .row {
@@ -236,6 +238,7 @@ NAV
 }
 
 .nav_logo {
+    margin-top: 5vh;
     /* display: none; */
     height: 20vh;
     /* padding-bottom: 5px; */
@@ -297,7 +300,7 @@ CONTAINERS
 
 .gal-img {
     max-width: 400px;
-    max-height: 200px;
+    max-height: 300px;
     overflow: hidden;
 }
 
@@ -316,6 +319,12 @@ CONTAINERS
     display: flex;
     flex-direction: column;
 }
+
+.img-container img {
+    
+    border: 1px solid #423760;
+}
+
 
 .img-container h3 {
     font-size: 3rem;
