@@ -294,6 +294,10 @@ CONTAINERS
     /* border: 1px solid #423760; */
 }
 
+/* //////////////
+GALLERY 
+///////////////*/
+
 #gallery .row {
     margin-bottom: 25px;
 }
@@ -302,6 +306,97 @@ CONTAINERS
     max-width: 400px;
     max-height: 300px;
     overflow: hidden;
+}
+
+.gallery_overlay,
+.gallery_overlay_2 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(66, 55, 96, 0.7);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.overlay_on {
+    display: block;
+}
+
+.close_icon {
+    display: absolute;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-right: 20px;
+    margin-left: auto;
+    margin-top: 50px;
+    font-size: 4rem;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.gallery_container {
+    position: absolute;
+    width: auto;
+    height: auto;
+    -webkit-box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.75);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gallery_container img {
+    max-height: 600px;
+    max-width: 950px;
+    height: auto;
+    width: auto;
+}
+
+.left-arrow,
+.right-arrow {
+    font-size: 6rem;
+    color: white;
+    text-align: center;
+    height: 6rem;
+    width: 6rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: .25s;
+    cursor: pointer;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+    color: #423760;
+    transition: .25s;
+}
+
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+}
+
+.left-arrow {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+}
+
+.photo_credit {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 5px 5px;
+    border-top-left-radius: 10px;
+    color: white;
+    font-size: 1.5rem;
+    background-color: rgba(0,0,0,0.3);
 }
 
 /* .bordered_section {
@@ -318,10 +413,10 @@ CONTAINERS
     text-align: center;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .img-container img {
-    
     border: 1px solid #423760;
 }
 
@@ -463,29 +558,4 @@ MEDIA INQUIRIES
         padding-top: 20px;
     }
 
-}
-
-/* FOR TESTING */
-
-#test_target {
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
-    height: 200px;
-    border: 1px solid papayawhip;
-    background-color: darkblue;
-    margin-top: 200px;
-}
-
-.photo_module {
-    position: absolute;
-    transform: translateX(50%);
-    transform: translateY(50%);
-    width: 500px;
-    height: 500px;
-    background-color: plum;
-    border: 2px solid forestgreen;
-    margin-left: auto;
-    margin-right: auto;
-    display: none;
 }

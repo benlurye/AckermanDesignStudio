@@ -1,0 +1,124 @@
+/* FOR TESTING */
+
+.test_target {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+    border: 1px solid papayawhip;
+    background-color: darkblue;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+.test_target_2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+    border: 1px solid chartreuse;
+    background-color: lightsalmon;
+    margin-top: 50px;
+    cursor: pointer;
+    margin-bottom: 500px;
+}
+
+
+.gallery_overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* .changed_image_ordway,
+.changed_image_wycoff {
+    display: none;
+} */
+
+.overlay_on {
+    display: block;
+}
+
+.close_icon {
+    display: absolute;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-right: 20px;
+    margin-left: auto;
+    margin-top: 10px;
+    font-size: 4rem;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.gallery_container {
+    position: absolute;
+    width: auto;
+    height: auto;
+    /* background-color: #c2ddf2; */
+/*     border: 1px solid black; */
+    -webkit-box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 11px -3px rgba(0,0,0,0.75);
+    /* position: fixed; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gallery_container img {
+    max-height: 600px;
+    max-width: 950px;
+    height: auto;
+    width: auto;
+}
+
+.left-arrow,
+.right-arrow {
+    font-size: 6rem;
+    color: white;
+    text-align: center;
+    height: 6rem;
+    width: 6rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: .25s;
+    cursor: pointer;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+    color: #423760;
+    transition: .25s;
+}
+
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+}
+
+.left-arrow {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+}
+
+.photo_credit {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 5px 5px;
+    border-top-left-radius: 10px;
+    color: white;
+    font-size: 1.5rem;
+    background-color: rgba(0,0,0,0.3);
+
+}
