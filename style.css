@@ -332,8 +332,8 @@ CONTAINERS
 }
 
 .separator img {
-    max-width: 300px;
-    max-height: 100px;
+    max-width: 100%;
+    max-height: 100%;
     width: auto;
     height: auto;
     overflow: hidden;
@@ -648,7 +648,9 @@ MEDIA INQUIRIES
         padding-left: 15px;
     }
 
-    
+    .wycoff {
+        margin-top: 15px;
+    }
 
     .gallery_container {
         max-width: 100%;
@@ -657,10 +659,14 @@ MEDIA INQUIRIES
         width: auto;
     }
 
+    .project_description {
+        display: none;
+    }
+
     .right-arrow {
         position: absolute;
         top: 50%;
-        right: 20px;
+        right: 40px;
     }
     
     .left-arrow {
