@@ -24,6 +24,9 @@ $(document).ready(function() {
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
+  ////////////////////
+  // header logo fade-in on visible
+  // //////////////////
 
   // hide .nav_logo on load to avoid weird clipping
 
@@ -47,8 +50,10 @@ $(document).ready(function() {
     }
 });
 
-
+  // ///////////////////
   // Hamburger mobile menu by Jonathan Suh
+  // //////////////////
+
     var $mobileNav = $(".mobile-nav-choices");
     var $mobileLinks = $(".mobile-nav-link");
     var $hamburger = $(".hamburger");
@@ -71,15 +76,15 @@ $(document).ready(function() {
   // IMAGE CAROUSEL OVERLAY
   // //////////////////// 
 
-  // on click of target div...
+  // on click of .ordway div...
     $(".ordway").click(function() {
-      console.log("clicked");
-
+  
       // 1.)) overlay full-screen partially transparent background
   
       $(".gallery_overlay").addClass("overlay_on");
       });
 
+  // on click of .ordway div...
     $(".wycoff").click(function() {
       console.log("clicked");
 
@@ -87,24 +92,24 @@ $(document).ready(function() {
   
       $(".gallery_overlay_2").addClass("overlay_on");
 
-      
-      // remove scroll when the overlay is up
+      $(html).attr("overflow", "hidden");
 
-      $(body, html).css("overflow", "hidden");
-      
       });
 
-
-
-
       // 2.) on click of X icon, remove overlay 
-    $(".close_icon").click(function() {
+      $(".close_icon").click(function() {
         $(".gallery_overlay, .gallery_overlay_2").removeClass("overlay_on");
         return currentIndex === 0;
     });
+      // 3.) on click outside image, remove overlay 
+  //     $(".gallery_overlay").click(function() {
+  //       $(".gallery_overlay, .gallery_overlay_2").removeClass("overlay_on");
+  //     return currentIndex === 0;
+  //     console.log(currentIndex);
+  // });
 
-
-  /////////////////////
+  
+  //////////////////////
   // IMAGE CAROUSEL
   // ///////////////////
 
@@ -120,22 +125,28 @@ $(document).ready(function() {
                       "Sofa"]
   
   var wycoffImages = ["images/Wycoff/Wycoff_Bath_A.jpg",
-                      "images/Wycoff/Wycoff_Bath_B.jpg",
+                      "images/Wycoff/bath_before.jpg",
                       "images/Wycoff/Wycoff_Bath_Shelf_Detail.jpg",
                       "images/Wycoff/Wycoff_Entry_A.jpg",
-                      "images/Wycoff/Wycoff_Kitchen.jpg"];
+                      "images/Wycoff/kitchen_before.jpg",
+                      "images/Wycoff/Wycoff_Kitchen.jpg",
+                      "images/Wycoff/ext_before.jpg",
+                      "images/Wycoff/ext_after.jpg"];
 
-  var wycoffNames = ["Bathroom",
-                      "Bathroom",
+  var wycoffNames = ["Bathroom, before",
+                      "Bathroom, after",
                       "Bathroom Storage",
                       "Entryway",
-                      "Kitchen"]
+                      "Kitchen, before",
+                      "Kitchen, after",
+                      "exterior, before",
+                      "exterior, after"]
 
   var currentIndex = 0;
 
   function ordwayImage() {
-      $("#ordway_changed_image").attr("src", ordwayImages[currentIndex]);
-      $("#ordway_changed_image").attr("alt", ordwayNames[currentIndex]);
+    $("#ordway_changed_image").attr("src", ordwayImages[currentIndex]);
+    $("#ordway_changed_image").attr("alt", ordwayNames[currentIndex]);
   };
 
   function wycoffImage() {
@@ -143,8 +154,11 @@ $(document).ready(function() {
     $("#wycoff_changed_image").attr("alt", wycoffNames[currentIndex]);
   };
 
+  // ////////////////////
+  // arrow navigation for galleries
+  ///////////////////////
   $(".right-arrow").on("click", function() {
-      if (currentIndex === 4) {
+      if (currentIndex === 7) {
           console.log(currentIndex);
           return;
       } else {
@@ -165,8 +179,26 @@ $(document).ready(function() {
       }
   });
 
+  // link arrow keys and escape key to gallery nav functionality
+  // from stackoverflow https://stackoverflow.com/questions/19347269/jquery-keypress-arrow-keys
   
-// QUESTIONS: 1.) can i string literal the photo credit? Perhaps add a variable?
-//            2.) How to most efficiently do the second carousel
+  $(document).keydown(function(e) {
+      switch(e.which) {
+          case 37:
+          $( ".left-arrow" ).click();
+          break;
+          
+          case 39:
+          $( ".right-arrow" ).click();
+          break;
+      
+          case 27:
+          $( ".close_icon" ).click();
+          break;
+      
+          default: return;
+      }
+  });
+
 
 });

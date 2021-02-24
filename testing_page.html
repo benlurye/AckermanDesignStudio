@@ -3,44 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ackerman Design Studio</title>
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <title>Testing</title>
+        <!-- css -->
+
+        <!-- <link rel="stylesheet" href="vendor/reset.css"> -->
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/css/bootstrap.min.css" />   
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styletest.css">
 
 
+        <!-- JQuery -->
+        <script src="vendor/jquery.js"></script>
+            
+        <!-- Bootstrap JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/js/bootstrap.min.js"></script>
 
-    <!-- 2 Nanum Myeongjo -->
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet"> 
-    <!-- Open Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
-    
-    <!-- css -->
-    <link rel="stylesheet" href="vendor/reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styletest.css">
-    <!-- <link rel="stylesheet" href="vendor/magnific-popup.css"> -->
-    
-    <script src="vendor/jquery.js"></script>
-    <script src="testapp.js"></script>
-    <!-- <script src="vendor/magnific-popup-min.js"></script> -->
+        <!-- Custom JS -->
+        <script src="testapp.js"></script>
 
 </head>
 <body>
-        <div class="gallery_overlay">
-            <div class="close_icon">X</div>
-                <i class="left-arrow"><</i>
-                <div class="gallery_container">
-                    
-                    <img id="changed_image" src="images/Ordway_Street/DALRShotAtWindowCropped.jpg" alt="Living Room">
-                <div class="photo_credit">Photo by Dan Amodeo</div>
-                </div>
-                <i class="right-arrow">></i>
+  
+  <div class="gallery_overlay">
+    <div class="project_description">
+      <p>Washington, DC single-bedroom condo.</p>
+    </div>
+    <div class="close_icon">X</div>
+        <i class="left-arrow"><</i>
+        <div class="gallery_container">
+            <img id="ordway_changed_image" src="images/Ordway_Street/DALRShotAtWindowCropped.jpg" alt="Living Room">
+        <div class="photo_credit">Photo by Dan Amodeo</div>
         </div>
-    
-          <div class="target test_target"></div>
-          <div class="target test_target_2"></div>
-    
-    </a>
-        
+        <i class="right-arrow">></i>
+</div>
+
+<div class="gallery_overlay_2">
+    <div class="project_description">
+      <p>Full remodel of 1970's-era home, 4 bed / 2 bath. Before and after photos included.</p>
+    </div>
+    <div class="close_icon">X</div>
+        <i class="left-arrow"><</i>
+        <div class="gallery_container">
+            <img id="wycoff_changed_image" src="images/Wycoff/ext_after.jpg" alt="Exterior">
+        <div class="photo_credit">Photo by Izzy Ackerman</div>
+        </div>
+        <i class="right-arrow">></i>
+</div>
+
+<div id="gallery">
+    <h2 id="gallery_anchor">Gallery</h2>
+    <div class="row">
+        <div class="col-5 img-container ordway">
+            <img class="gal-img" src="images/Ordway_Street/DALRShotAtWindowCropped.jpg">
+            <h3>Washington, DC Condo</h3>
+        </div>
+        <div class="col-2">
+            <!-- left empty for easy spacing -->
+        </div>
+        <div class="col-5 img-container wycoff">
+            <img class="gal-img" src="images/Wycoff/Wycoff_Bath_Shelf_Detail.jpg">
+            <h3>Florida Bungalow</h3>
+        </div>
+    </div>
+</div>
+
+
+  <!-- <div class="bg-box top-left"></div>
+  <div class="bg-box middle-right"></div>
+  <div class="bg-box skinny-right"></div>
+  <div class="bg-box bottom-left"></div>
+         -->
 </body>
 </html>

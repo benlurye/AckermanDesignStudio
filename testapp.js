@@ -1,43 +1,50 @@
 $(document).ready(function() {
-
-    // 1.) on click of target div, overlay full-screen partially transparent overlay
-    // 2.) on click of X icon, remove overlay
-    
-    // 2.) activate gallery module
-    // on click of target div...
-
-    $(".target").click(function() {
-        console.log("clicked");
-
+    // on click of .ordway div...
+    $(".ordway").click(function() {
+  
         // 1.)) overlay full-screen partially transparent background
-        
-        $(".gallery_overlay").addClass("overlay_on");
-
-        // remove the ability to scroll
-        // $(body).css("overflow", "hidden");
-        });
-
-    // 2.) on click of X icon, remove overlay 
     
-    $(".close_icon").click(function() {
-        $(".gallery_overlay").removeClass("overlay_on");
-        
-        
-        // $(body).css("overflow", "visible");
-    });
-
+        $(".gallery_overlay").addClass("overlay_on");
+        });
+  
+    // on click of .ordway div...
+      $(".wycoff").click(function() {
+        console.log("clicked");
+  
+        // 1.)) overlay full-screen partially transparent background
+    
+        $(".gallery_overlay_2").addClass("overlay_on");
+  
+        $(html).attr("overflow", "hidden");
+  
+        });
+  
+        // 2.) on click of X icon, remove overlay 
+        $(".close_icon").click(function() {
+          $(".gallery_overlay, .gallery_overlay_2").removeClass("overlay_on");
+          return currentIndex === 0;
+      });
+        // 3.) on click outside image, remove overlay 
+    //     $(".gallery_overlay").click(function() {
+    //       $(".gallery_overlay, .gallery_overlay_2").removeClass("overlay_on");
+    //     return currentIndex === 0;
+    //     console.log(currentIndex);
+    // });
+  
+    
+    //////////////////////
     // IMAGE CAROUSEL
-
+    // ///////////////////
+  
+    
     var ordwayImages = ["images/Ordway_Street/DALRShotAtWindowCropped.jpg",
                         "images/Ordway_Street/DABedsideShot.jpg",
                         "images/Ordway_Street/DABookcaseShot.jpg",
-                        "images/Ordway_Street/DASofaShot.jpg",
                         "images/Ordway_Street/DASofaShotVertical.jpg"];
-
+  
     var ordwayNames = ["Living Room",
                         "Bedside",
                         "Bookcase, Bedroom",
-                        "Sofa",
                         "Sofa"]
     
     var wycoffImages = ["images/Wycoff/Wycoff_Bath_A.jpg",
@@ -45,35 +52,36 @@ $(document).ready(function() {
                         "images/Wycoff/Wycoff_Bath_Shelf_Detail.jpg",
                         "images/Wycoff/Wycoff_Entry_A.jpg",
                         "images/Wycoff/Wycoff_Kitchen.jpg"];
-
+  
     var wycoffNames = ["Bathroom",
                         "Bathroom",
                         "Bathroom Storage",
                         "Entryway",
                         "Kitchen"]
-
+  
     var currentIndex = 0;
-
-
-    // Change image based on which div was clicked
-    
-    function changeImage() {
-        $("#changed_image").attr("src", ordwayImages[currentIndex]);
-        $("#changed_image").attr("alt", ordwayNames[currentIndex]);
-        // $("h1").text(cityNames[currentIndex]);
+  
+    function ordwayImage() {
+      $("#ordway_changed_image").attr("src", ordwayImages[currentIndex]);
+      $("#ordway_changed_image").attr("alt", ordwayNames[currentIndex]);
     };
-
-
-
-    // Arrow controls for Image Carousel
-
+  
+    function wycoffImage() {
+      $("#wycoff_changed_image").attr("src", wycoffImages[currentIndex]);
+      $("#wycoff_changed_image").attr("alt", wycoffNames[currentIndex]);
+    };
+  
+    // ////////////////////
+    // arrow navigation for galleries
+    ///////////////////////
     $(".right-arrow").on("click", function() {
         if (currentIndex === 4) {
             console.log(currentIndex);
             return;
         } else {
             currentIndex = currentIndex + 1;
-            changeImage();
+            ordwayImage();
+            wycoffImage();
         }
     });
     
@@ -83,10 +91,29 @@ $(document).ready(function() {
             return;
         } else {
             currentIndex = currentIndex - 1;
-            changeImage();
+            ordwayImage();
+            wycoffImage();
         }
     });
 
+    // link arrow keys and escape key to gallery nav functionality
+    // from stackoverflow https://stackoverflow.com/questions/19347269/jquery-keypress-arrow-keys
+    $(document).keydown(function(e) {
+        switch(e.which) {
+            case 37:
+            $( ".left-arrow" ).click();
+            break;
+            
+            case 39:
+            $( ".right-arrow" ).click();
+            break;
         
-    
+            case 27:
+            $( ".close_icon" ).click();
+            break;
+        
+            default: return;
+        }
+    });
+
 });

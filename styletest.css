@@ -122,3 +122,46 @@
     background-color: rgba(0,0,0,0.3);
 
 }
+
+/* BG BOXES */
+
+.bg-box {
+    opacity: .8;
+    z-index: -1
+}
+
+.top-left {
+    width: 600px;
+    height: 1000px;
+    background-color: #c2ddf2;
+    position: absolute;
+    left: 250px;
+    top: 105vh;
+}
+
+.middle-right {
+    width: 800px;
+    height: 600px;
+    background-color: #423760;
+    position: absolute;
+    top: calc(105vh + 725px);
+    right: 150px;
+}
+
+.skinny-right {
+    height: 1250px;
+    width: 150px;
+    background-color: #c2ddf2;
+    position: absolute;
+    top: calc(105vh + 1050px);
+    right: 450px;
+}
+
+.bottom-left {
+    height: 600px;
+    width: 900px;
+    background-color: #423760;
+    position: absolute;
+    top: calc(105vh + 1350px);
+    left: 50px;
+}
