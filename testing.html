@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- CSS -->
+
+		<link rel="stylesheet" href="vendor/JiSlider.css">
+		<link rel="stylesheet" href="style.css">
+
+		<!-- Google Fonts -->
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+	
+	
+		<title>jQuery JiSlider Plugin Demo</title>
+</head>
+	<body>
+		<div class="logo">
+			<p>Ackerman<br>Design<br>Studio</p>
+		</div>
+		<div class="navigation">
+			<a>contact<span> </span>us</a>
+		</div>
+		<div id="JiSlider" class="jislider">
+			
+			<ul>
+				<li>
+					<img src="images/Ordway_Street/DALRShotatWindow.jpg">
+				</li>
+				<li>
+					<img src="images/Ordway_Street/DABookcaseShot.jpg">
+				</li>
+				<li>
+					<img src="images/Ordway_Street/DABedsideShot.jpg">
+				</li>
+			</ul>
+		</div>
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="vendor/JiSlider.js"></script>
+		<script>
+			$(window).load(function () {
+				$('#JiSlider').JiSlider({color: '#fff', start: 1, reverse: false, time: 2000, stay: 5000, controller: false}).addClass('ff')
+			})
+		</script>
+	</body>
+</html>
