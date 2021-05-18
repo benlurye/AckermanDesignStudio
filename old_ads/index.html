@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ackerman Design Studio</title>
+
+    <!-- preload landing image -->
+    <link rel="preload" href="images/big_painting.jpg" as="image">
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!-- 2 Nanum Myeongjo -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+
+    <!-- css -->
+    <link rel="stylesheet" href="vendor/reset.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!--Hamburgers by Jonathan Suh-->
+    <link href="vendor/hamburger.css" rel="stylesheet"> 
+
+    <!-- JQuery -->
+    <script src="vendor/jquery.js"></script>
+        
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+
+
+</head>
+<body>
+    
+
+    <!-- LANDING AREA -->
+
+    <div class="hero">
+        <img id="landing_image" src="images/big_painting.jpg" alt="Ackerman Design Studio"/>
+        
+        <img id="main_logo" src="images/logo_full.jpg" alt="Ackerman Design Studio" />
+        
+    </div>
+
+    <!-- NAV -->
+
+    <div class="container-sticky desktop-nav">
+        <div class="row">
+            <div class="col-1">
+                <a href="#top"><img class="nav_logo" src="images/logo_full.jpg" alt="Ackerman Design Studio"></a>
+            </div>
+
+            <div class="col-3 transparant">
+                <!-- intentionally empty -->
+            </div>
+    
+            <div class="col-2">
+                <a href="#about_anchor">about</a>
+            </div>
+            
+            <div class="col-2">
+                <a href="#gallery_anchor">gallery</a>
+            </div>
+    
+            <div class="col-2">
+                <a href="#guide">how we work</a>
+            </div>
+            
+            <div class="col-2">
+                <a href="#contact_anchor">contact</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-sticky mobile-nav">
+        <div class="row">
+            <div class="col-2 center-this">
+                <img class="nav_logo_mobile" src="images/logo_mobile.jpg" alt="Ackerman Design Studio">
+            </div>
+    
+            <div class="col-8">
+                <img src="images/logo_text.jpg">
+            </div>
+    
+            <div class="col-2 center-this">
+                <button class="hamburger hamburger--squeeze" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                    </button>
+                    
+            </div>
+        </div>
+    
+        <div class="mobile-nav-choices">
+            <div class="mobile-nav-link"><a href="#about_anchor">About</a></div>
+            <div class="mobile-nav-link"><a href="#gallery_anchor">Gallery</a></div>
+            <div class="mobile-nav-link"><a href="#guide_anchor">How it works</a></div>
+            <div class="mobile-nav-link"><a href="#contact_anchor">Contact</a></div>
+        </div>
+    </div>
+
+    <!-- Background  -->
+       
+    <div>
+            <div class="bg-box top-left"></div>
+            <div class="bg-box middle-right"></div>
+            <div class="bg-box skinny-right"></div>
+            <div class="bg-box bottom-left"></div>
+        
+            <!-- ABOUT/BIO -->
+        
+        <div id="about" >
+            <h2 id="about_anchor">About</h2>
+            <div class="quote">
+                <p>
+                    <span>“Great design is important</span>—<br>it's a reflection of what makes people happy and gives them comfort and joy.<span>”</span>
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <img src="images/izzy_headshot.jpg" alt="Izzy Ackerman" />
+                </div>
+                
+                <div class="col-6">
+                    <p>Brooklyn-based interior designer Izzy Ackerman enjoys maximizing color and mixing classic and modern architectural elements to bring life to every space, all the while ensuring seamless functionality—because pretty things are extra pretty when they function well! 
+                    </p>
+                
+                    <p>Born in Jacksonville, Florida to a family that always places great value in art and design, Izzy's love of beautiful spaces and things was fostered from an early age. Later, Izzy moved to Washington, DC and earned her BFA in Interior Design from The George Washington University. 
+                    </p>
+                    
+                    <p>Since then, Izzy has worked for top designers in DC and New York, and has lead and consulted on the creation of spaces in DC, Maryland, New York, California, Florida, and more.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="separator">
+            <img src="images/line_break_1.jpg">
+        </div>
+
+        <!-- GALLERY -->
+
+        <div class="gallery_overlay">
+            <div class="project_description">
+                <p>Washington, DC single-bedroom condominium.</p>
+                </div>
+            <div class="close_icon">X</div>
+                <i class="left-arrow"><</i>
+                <div class="gallery_container">
+                    <img id="ordway_changed_image" src="images/Ordway_Street/DALRShotAtWindowCropped.jpg" alt="Living Room">
+                <div class="photo_credit">Photo by Dan Amodeo</div>
+                </div>
+                <i class="right-arrow">></i>
+        </div>
+
+        <div class="gallery_overlay_2">
+            <div class="project_description">
+                <p>Full remodel of 1970's-era home, 4 bed / 2 bath. Interior and exterior, including landscaping. Before and after photos shown.</p>
+            </div>  
+            <div class="close_icon">X</div>
+                <i class="left-arrow"><</i>
+                <div class="gallery_container">
+                    <img id="wycoff_changed_image" src="images/Wycoff/Wycoff_Bath_A.jpg" alt="Bathroom">
+                <div class="photo_credit">Photo by Izzy Ackerman</div>
+                </div>
+                <i class="right-arrow">></i>
+        </div>
+
+        <div id="gallery">
+            <h2 id="gallery_anchor">Gallery</h2>
+            <div class="row">
+                <div class="col-5 img-container ordway">
+                    <img class="gal-img" src="images/Ordway_Street/DALRShotAtWindowCropped.jpg">
+                    <h3>Washington, DC Condo</h3>
+                </div>
+                <div class="col-2">
+                    <!-- left empty for easy spacing -->
+                </div>
+                <div class="col-5 img-container wycoff">
+                    <img class="gal-img" src="images/Wycoff/Wycoff_Bath_Shelf_Detail.jpg">
+                    <h3>Florida Bungalow</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="separator">
+            <img src="images/line_break_2.jpg">
+        </div>
+
+        <!-- HOW IT WORKS -->
+
+        <div id="guide">
+            <h2 id="guide_anchor">How we Work</h2>
+                <p>Thank you so much for your interest in working with Ackerman Design Studio! Below is a basic overview of my preferred work process. As always, this process is amenable to changes that fit specific project requirements, which may be discussed and agreed to in writing before work is to begin.</p>
+                
+                <p><span>Stage 1: Concept, Space Planning, and Design Development</span>
+                <br>
+                In this stage, we first come up with a clear direction and goals for the project. We will discuss scope, requirements, and budget, as well as stylistic preferences, to create a cohesive design concept to guide my work. Finally, I apply our concept to the space plan and select specific items to present in a Design Package, which may include alternate selections as needed. At the end of Stage 1, we will meet to review the Design Package and associated samples and make final selections for all items.</p>
+                
+                <p><span>Stage 2: Procurement and Installation</span>
+                <br>
+                After our meeting at the end of Stage 1, I will amend the Design Package to show final selections and send a concise proposal listing each item's details and price, including my net trade price and all purchasing fees. The proposal will also show a grand total and required deposits to begin order placements.
+                </p>
+
+                <p>
+                After the initial deposit is received, I will place all orders, approve cuttings from fabric dye lots and furniture finish samples, and follow up on order progress. Balances on deposits will be requested as necessary to arrange for shipment of custom items. I will arrange for all deliveries either to your home or a receiving warehouse. I will schedule an installation date with you after everything arrives and will plan to be on site to oversee furniture placement, window treatment installation, and to style accessories, books, etc. Final delivery charges will be billed separately after installation. 
+                </p>
+                <p>
+                    More questions? Let me know in an <a href="mailto:hello@ackermandesignstudio.com">email</a>, phone call, or by filling out the form below.
+                </p>
+        </div>
+
+        
+        <div class="separator">
+            <img src="images/line_break_3.jpg">
+        </div>
+        
+        <!-- CONTACT/SOCIAL -->
+
+        <div id="contact">
+            <h2 id="contact_anchor">reach out!</h2>
+            <form id="contact_form">
+                <div class="row">
+                    <div class="col-4">
+                        <label>Name *</label>
+                    </div>
+                    <div class="col-8">
+                        <input id="name" type="text" placeholder="Jimmy Choo" required />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Email *</label>
+                    </div>
+                    <div class="col-8">
+                        <input id="email" type="email" placeholder="jimmy@fancyshoes.net" required />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Phone</label>
+                    </div>
+                    <div class="col-8">
+                        <input id="phone_number" type="tel" placeholder="(123) 456-7890" />
+                    </div>
+                </div>
+                
+                <!-- <div class="row">
+                    <div class="col-4">
+                        <label>What can we do for you?</label>
+                    </div>
+                    <div class="col-8">
+                        <ul>
+                            <li><input type="checkbox" name="design" id="design"><label>Home design</label></li>
+                            <li><input type="checkbox" name="consult" id="consult"><label>Quick consult</label></li>
+                            <li><input type="checkbox" name="mailing_list" id="mailing_list"><label>Add me to your mailing list</label></li>
+                            <li><input type="checkbox" name="other" id="other"><label>Other</label></li>
+                        </ul>
+                    </div>
+                </div> -->
+
+                <div class="row">
+                    <div class="col-4">
+                        <label>Message</label>
+                    </div>
+                    <div class="col-8">
+                        <textarea id="contact_message" placeholder="Your message here!"></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <!-- intentionally empty -->
+                    </div>
+                    <div class="col-8">
+                        <button class="submit_button">submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+            <div class="social_links">
+                <ul>
+                    <li>
+                        <a href="mailto:hello@ackermandesignstudio.com">
+                            <img src="images/mail.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/izzy-ackerman/" target="_blank">
+                            <img src="images/linkdin.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="instagram.com/izz_foshizz" target="_blank">
+                            <img src="images/instagram.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.pinterest.com/ackermandesignstudio/" target="_blank">
+                            <img src="images/pinterest.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        <div class="separator">
+            <img src="images/line_break_4.jpg">
+        </div>
+    </div>
+
+    <footer>
+        <p>This page created by <a href="https://www.benlurye.com/" target="_blank">Benjamin Lurye</a></p>
+    </footer> 
+
+        
+</body>
+</html>
