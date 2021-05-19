@@ -17,42 +17,52 @@
 
     <!-- JS -->
     <script src="vendor/jquery.js"></script>
-
+    <script src="app.js"></script>
 
     <title>Ackerman Design Studio</title>
 </head>
-<body>
-    <div class="logo dark">
-        <p>Ackerman<br>Design<br>Studio</p>
+<body class="contact-body">
+    <div class="logo">
+        <h1>Ackerman<br>Design<br>Studio</h1>
     </div>
-    <div class="navigation navigation-dark">
-        <p>
-            <a class="dark" href="index">home</a>
-        </p>
+    <div class="navigation">
+            <a id="contact-return-link" href="index.html">home</a>
     </div>
-        
-        <div class="contact-wrapper">
+    <article class="bio">
+        <p>Ackerman Design Studio has completed and consulted on design projects from coast to coast. Izzy Ackerman is a graduate of The George Washington University with a degree in Interior Design, and as worked for top designers in DC and NYC.</p>
+    </article>
+    <div class="contact-box hidden">
+        <form id="contact-form">
+            <h3>contact ADS</h3>
+            <ul>
+                <li>
+                    <label class="form-label" for="name"></label>
+                    <input class="form-text" id="name" type="text" placeholder="name">
+                </li>
+                <li>
+                    <label class="form-label" for="email"></label>
+                    <input class="form-text" id="email" type="email" placeholder="email">
+                </li>
+            </ul>
             
-            <!-- <img class="desk-contact" src="images/izzy_desk.jpeg"> -->
-            <div class="bio">
-                <p>
-                    Ackerman Design Studio is a full-service interior design studio based in Brooklyn, NY. 
-            Izzy Ackerman holds a BFA in Interior Design from The George Washington University and has 
-            worked for top designers in DC and New York City since 2011. She has completed projects
-            across the US.
-                </p>
-            </div>
-            <div class="contact-text">
-                <p>Brooklyn, NY</p>
-                <a href="tel:904-571-9002">904-571-9002</a><br>
-                <a href="mailto:admin@ackermandesignstudio.com?subject=Interest in Ackerman Design Studio">admin@ackermandesignstudio.com</a>
-            </div>
+            <label class="form-label" for="message"></label>
+            <textarea class="form-textarea" id="message" placeholder="type your message here"></textarea>
+            <br>
+            
+            <button class="form-submit-button">submit</button>
+
+        </form>
+    </div>
+
+        <article class="contact-text">
+            <p>Brooklyn, NY 11205<br>
+            <a href="tel:904-571-9002">904-571-9002</a><br>
+            <a href="mailto:admin@ackermandesignstudio.com?subject=hello! let's design.">admin@ackermandesignstudio.com</a><br>
+            <a class="contact-activate-button">Contact Form</a></p>
+        </article>
+        
+       
         </div>
-
-
-    <!-- name, email, message (form) -->
-
-   
     
 </body>
 </html>

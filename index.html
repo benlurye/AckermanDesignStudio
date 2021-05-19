@@ -1,38 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="vendor/reset.css">
-    <link rel="stylesheet" href="style.css">
+		<!-- CSS -->
 
-    <!-- Google Fonts -->
+		<link rel="stylesheet" href="vendor/JiSlider.css">
+		<link rel="stylesheet" href="style.css">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+		<!-- Google Fonts -->
 
-
-    <!-- JS -->
-    <script src="vendor/jquery.js"></script>
-
-
-    <title>Ackerman Design Studio</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+	
+        <!-- <script src="vendor/jquery.js"></script> -->
+        <!-- <script src="app.js"></script> -->
+	
+		<title>Ackerman Design Studio</title>
 </head>
-<body>
-    <div class="slider-wrapper">
-        <div class="logo">
-            <p>Ackerman<br>Design<br>Studio</p>
-        </div>
-    <div class="navigation">
-        <a>contact<span> </span>us</a>
-    </div>
-        <div class="slide-1">
-            <img src="images/Ordway_Street/DALRShotAtWindow.jpg">
-        </div>
-    </div>
-    
-</body>
+	<body>
+		<div class="logo">
+			<h1>Ackerman<br>Design<br>Studio</h1>
+		</div>
+		<div class="navigation">
+			<a href="contact.html">contact<span> </span>us</a>
+		</div>
+		<div id="JiSlider" class="jislider">
+			
+			<ul>
+				<li>
+					<img src="images/Ordway_Street/DALRShotatWindow.jpg">
+				</li>
+				<li>
+					<img src="images/Ordway_Street/DABookcaseShot.jpg">
+				</li>
+				<li>
+					<img src="images/Ordway_Street/DABedsideShot.jpg">
+				</li>
+			</ul>
+		</div>
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="vendor/JiSlider.js"></script>
+		<script>
+			$(window).load(function () {
+				$('#JiSlider').JiSlider({color: '#fff', start: 1, reverse: false, time: 1000, ease: 'ease-in-out', stay: 8000}).addClass('ff')
+			})
+		</script>
+	</body>
 </html>

@@ -103,7 +103,7 @@
 			time: 600,
 			stay: 3000,
 			controller: true,
-			easing: 'ease',
+			easing: 'ease-out',
 			color: '#fff',
 			reverse: false,
 		}, options);
@@ -173,9 +173,9 @@
 				backgroundColor: setting.color,
 			});
 
-			var controller = $('<div>', {'class': 'jislider__controller'}).css({
-				width: 20 * slides,
-			});
+			// var controller = $('<div>', {'class': 'jislider__controller'}).css({
+			// 	width: 20 * slides,
+			// });
 			
 			var buttons = new Array();
 			for (var i = 0; i < slides; i++) {
@@ -186,11 +186,11 @@
 					animate.control(index)
 				});
 			}
-			this.append(leftArrow, rightArrow, controller);
+			this.append(leftArrow, rightArrow);
 			leftArrow.append(leftArrowTop, leftArrowBottom);
 			rightArrow.append(rightArrowTop, rightArrowBottom);
-			controller.append(buttons);
-			animate.init({controller: controller});
+			// controller.append(buttons);
+			// animate.init({controller: controller});
 		}
 
 		animate.roll(0);

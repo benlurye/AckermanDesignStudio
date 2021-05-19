@@ -1,21 +1,10 @@
 $(document).ready(function(){
-    $('#JiSlider').JiSlider(
-        // autoplay
-        "auto:", true,
-        // initial image
-        "start:", 1,
-        // animation speed
-        "time:", 600,
-        // transition delay
-        "stay:", 3000,
-        // display slider controls
-        "controller:", true,
-        // easing method
-        "easing:", 'ease',
-        // text color
-        "color:", '#fff',
-        // reverse direction
-        "reverse:", false,
-        )
+    
+    // hide contact form box on load
+    // document.querySelector(".contact-box").classList.add('hidden');
 
+    
+    document.querySelector(".contact-activate-button").addEventListener("click", function()  {
+        document.querySelector(".contact-box").classList.toggle("hidden");
+    })
 })
