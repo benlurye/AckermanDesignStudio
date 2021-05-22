@@ -113,12 +113,12 @@ html, body {
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
-    transition: .5s ease-out;
+    transition: .5s;
 }
 
 .contact-body-blur {
-    backdrop-filter: blur(10px);
-    transition: .5s ease-out;
+    backdrop-filter: blur(5px);
+    transition: .5s;
 }
 
 .bio {
