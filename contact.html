@@ -32,33 +32,30 @@
         <p>Ackerman Design Studio has completed and consulted on design projects from coast to coast. Izzy Ackerman is a graduate of The George Washington University with a degree in Interior Design, and as worked for top designers in DC and NYC.</p>
     </article> -->
     <div class="contact-box hidden">
-        
-            <h3>contact ADS</h3>
+        <h3>contact ADS</h3>
 
-            <div id="mdiv">
-                <div class="mdiv">
-                  <div class="md"></div>
-                </div>
-            </div>
-            <form id="contact-form"></form>
+        <div id="mdiv">
+            <div class="mdiv">
+            <div class="md"></div>
+        </div>
+        </div>
+        
+        <form action="https://formspree.io/f/xyylwgne" method="POST">
             <ul>
+                <!-- <label></label> -->
                 <li>
-                    <label class="form-label" for="name"></label>
-                    <input class="form-text" id="name" type="text" placeholder="name">
+                    <input type="name" name="_name" class="form-text" placeholder="your name" required>
                 </li>
+                <!-- <label></label> -->
                 <li>
-                    <label class="form-label" for="email"></label>
-                    <input class="form-text" id="email" type="email" placeholder="email">
+                    <input type="email" name="_replyto" class="form-text" placeholder="your email" required>
                 </li>
             </ul>
-            
-            <label class="form-label" for="message"></label>
-            <textarea class="form-textarea" id="message" placeholder="type your message here"></textarea>
+            <!-- <label></label> -->
+            <textarea name="message" placeholder="your message" required></textarea>
             <br>
-            
-            <button class="form-submit-button">submit</button>
-
-        </form>
+            <button type="submit" class="form-submit-button">Send</button>
+            </form>
     </div>
 
         <article class="contact-text">
@@ -73,6 +70,28 @@
         <footer>
             <p>designed and maintained by <a href="https://www.benlurye.com/portfolio" target="_blank">Benjamin Lurye</a></p>
         </footer>
-    
+
+        <script>
+            var form = document.getElementById("my-form");
+            
+            async function handleSubmit(event) {
+              event.preventDefault();
+              var status = document.getElementById("my-form-status");
+              var data = new FormData(event.target);
+              fetch(event.target.action, {
+                method: form.method, 
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+              }).then(response => {
+                status.innerHTML = "Thanks for your submission!";
+                form.reset()
+              }).catch(error => {
+                status.innerHTML = "Oops! There was a problem submitting your form"
+              });
+            }
+            form.addEventListener("submit", handleSubmit)
+        </script>
 </body>
 </html>

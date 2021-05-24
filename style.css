@@ -186,7 +186,7 @@ html, body {
     font-family: "Major Mono Display", monospace;
 }
 
-.contact-box ul {
+form ul {
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
