@@ -28,16 +28,17 @@ html, body {
 /* Logo */
 
 .logo {
-    background: linear-gradient(90deg, rgba(25,25,25,.8) 0%, rgba(0,0,0,0) 100%);
+/*     background: linear-gradient(90deg, rgba(25,25,25,.8) 0%, rgba(0,0,0,0) 100%); */
 /*     isolation: isolate; */
+    background: transparent;
     position: absolute;
     top: 20px;
     left: 20px;
     z-index: 1;
     padding: 0 0 2px 10px;
+    mix-blend-mode: difference;
+/*     filter: opacity(.9); */
     
-/*     mix-blend-mode: difference; */
-/*     filter: invert(50%); */
 }
 
 .logo h1 {
@@ -172,7 +173,7 @@ html, body {
     border: 1px solid #c3ddf2;
     background-color: rgb(50,50,50, .9);
     transition: .5s ease-out;
-    transform: translateY(50%);
+    transform: translateY(35%);
 }
 
 .hidden {
@@ -314,10 +315,20 @@ footer a:hover {
 }
 
 @media only screen and (max-width: 600px) {
+    .logo {
+        top: 10px;
+        left: 10px;
+        background: unset;
+    }
 
     .mobile-nav-bottom {
         top: unset;
-        bottom: 25px;
+        bottom: 20px;
+        right: 10px;
+    }
+
+    footer {
+        display: none;
     }
 
     .mobile-nav-bottom a {
@@ -333,9 +344,14 @@ footer a:hover {
         border: 1px solid black;
     }
 
+    .contact-body {
+        overflow: visible;
+    }
+
     .contact-box {
         transform: translateY(35%);
         width: 90%;
+        height: unset;
     }
 
     .contact-box ul {
@@ -349,5 +365,10 @@ footer a:hover {
 
     textarea::placeholder {
         padding-left: unset;
+    }
+
+    .form-submit-button {
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }

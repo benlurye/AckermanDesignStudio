@@ -10,7 +10,4 @@ $(document).ready(function(){
 
 	document.querySelector("#mdiv").addEventListener("click", hideContact);
 
-	// document.querySelector(".form-submit-button").addEventListener("submit", function(event) {
-	// 	event.preventDefault();
-	// 	hideContact;
 	});
