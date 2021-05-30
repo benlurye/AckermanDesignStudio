@@ -30,14 +30,15 @@ html, body {
 .logo {
 /*     background: linear-gradient(90deg, rgba(25,25,25,.8) 0%, rgba(0,0,0,0) 100%); */
 /*     isolation: isolate; */
-    background: transparent;
+/*     clip-path: polygon(0 0, 0 100%, 100% 0); */
+/*     background: #000; */
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 10px;
+    left: 10px;
     z-index: 1;
-    padding: 0 0 2px 10px;
-    mix-blend-mode: difference;
-/*     filter: opacity(.9); */
+    padding: 5px 5px;
+/*     mix-blend-mode: difference; */
+/*     filter: opacity(.8); */
     
 }
 
@@ -45,10 +46,11 @@ html, body {
     font-family: 'Major Mono Display', monospace;
     font-size: 40px;
     color: #FFF;
+    text-shadow: 1px 1px 5px #000;
 }
 
 .logo-white {
-    background: unset;
+    mix-blend-mode: unset;
 }
 
 .dark p {
@@ -73,6 +75,7 @@ html, body {
         padding: 5px;
         background-color: rgba(255,255,255,.5);
     transition: .25s;
+    text-transform: capitalize;
 }
 
 #contact-return-link {
@@ -118,7 +121,7 @@ html, body {
 }
 
 .contact-body-blur {
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
     transition: .5s;
 }
 
@@ -174,6 +177,8 @@ html, body {
     background-color: rgb(50,50,50, .9);
     transition: .5s ease-out;
     transform: translateY(35%);
+    -webkit-box-shadow: 4px 3px 15px 2px rgba(0,0,0,0.65); 
+    box-shadow: 4px 3px 15px 2px rgba(0,0,0,0.65);
 }
 
 .hidden {
@@ -226,6 +231,10 @@ textarea {
     font-weight: bolder;
     letter-spacing: 2px;
     font-size: .8rem;
+}
+
+textarea::placeholder {
+    padding-left: unset;
 }
 
 .form-text {
