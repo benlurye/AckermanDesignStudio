@@ -32,18 +32,18 @@
 
         <div class="col-3">
             <div class="row column-row">
-                <div class="col-6">
                     <article class="contact-text">
-                        <p>Brooklyn, NY 11205<br>
-                        <a href="tel:904-571-9002">904-571-9002</a><br>
-                        <a href="mailto:admin@ackermandesignstudio.com?subject=Ackerman Design Studio - website inquiry">admin@ackermandesignstudio.com</a><br>
-                </div>
-                
-                <div class="col-6">
-                    <h3>contact ADS</h3>
-
+                        <p>Brooklyn, NY 11205</p>
+                        <p>
+                            <a href="tel:904-571-9002">904-571-9002</a>
+                        </p>
+                        <p>
+                            <a href="mailto:admin@ackermandesignstudio.com?subject=Ackerman Design Studio - website inquiry">admin@ackermandesignstudio.com</a>
+                        </p>
+                    </article>
                 
                     <form id="my-form" action="https://formspree.io/f/xyylwgne" method="POST">
+                        <h3>contact ADS</h3>
                         <ul>
                             <li>
                                 <input type="name" name="_name" class="form-text" placeholder="your name" required>
@@ -54,11 +54,10 @@
                         </ul>
                         <textarea name="message" placeholder="your message" required></textarea>
                         <button type="submit" class="form-submit-button">Send</button>
+                        <p id="my-form-status"></p>
                     </form>
                 </div>
             </div>
-        </div>
-
         <div class="col-6 centered">
             <img class="desk-img" src="images/izzy_desk.jpg" alt="Ackerman Design Studio Workspace">
         </div>
@@ -87,10 +86,10 @@
                     'Accept': 'application/json'
                 }
               }).then(response => {
-                status.innerHTML = "Thanks for your submission!";
+                status.innerHTML = "Thank you for your interest in ADS! We will be in touch soon.";
                 form.reset()
               }).catch(error => {
-                status.innerHTML = "Oops! There was a problem submitting your form"
+                status.innerHTML = "Sorry, something  went wrong. Please try again."
               });
             }
             form.addEventListener("submit", handleSubmit)

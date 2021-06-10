@@ -49,38 +49,41 @@
 /* Nav */
 
 .navigation a {
-    padding-right: 120px;
+    letter-spacing: 1px;
+}
+
+.navigation a,
+.contact-text a {
+    line-height: 1.7rem;
     font-size: .8rem;
     text-decoration: none;
     font-family: 'oxygen', sans-serif;
-    letter-spacing: 2px;
     transition: .25s;
-    text-transform: capitalize;
     color: inherit;
 }
 
-.navigation a::after {
+.navigation a::after,
+.contact-text a::after {
     display: block;
     content: '';
     height: 1px;
     width: 100%;
     background-color: #423761;
-    position: absolute;
-    bottom: 0;
-/*     opacity: 0; */
-    left: 5px;
+    opacity: 0;
     transform: scale(0);
     transform-origin: center;
     transition: .5s;
 }
 
-.navigation a:hover::after {
+.navigation a:hover::after,
+.contact-text a:hover::after {
     opacity: 1;
     transform: scale(1);
     transition: .5s;
 }
 
-.navigation a:visited {
+.navigation a:visited,
+.contact-text a:visited {
     color: inherit;
 }
 
@@ -95,6 +98,7 @@
 
 .column-row {
     flex-direction: column;
+    height: 100%;
 }
 
 .col-2 {
@@ -131,15 +135,9 @@
 }
 
 .contact-text a {
-    display: inline-block;
+    display: inline-block; /*change to inline-block to make full-width underline*/
     text-decoration: none;
     color: inherit;
-    transition: .25s;
-}
-
-.contact-text a:hover,
-.navigation a:hover {
-    transform: translateX(15px);
     transition: .25s;
 }
 
@@ -200,6 +198,14 @@ button:hover {
     transition: .25s;
 }
 
+#my-form-status {
+    font-family: 'oxygen', sans-serif;
+    font-size: .8rem;
+    text-align: center;
+    line-height: 1.2rem;
+    margin-top: 5px;
+}
+
 footer {
     width: 100%;
     position: absolute;
@@ -209,12 +215,13 @@ footer {
     font-size: .6rem;
     text-transform: uppercase;
     color: white;
+    padding-top: 5px;
+    border-top: 1px solid white;
 }
 
 .footer-border {
     bottom: 5px;
     border-top: 1px solid black;
-    padding-top: 5px;
     color: black;
 }
 
