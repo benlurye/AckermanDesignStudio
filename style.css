@@ -98,7 +98,8 @@
 
 .column-row {
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
+    justify-content: space-evenly;
 }
 
 .col-2 {
@@ -131,7 +132,7 @@
     font-size: .8rem;
     font-family: 'Oxygen', sans-serif;
     line-height: 1.7rem;
-    margin-top: 200px;
+/*     margin-top: 200px; */
 }
 
 .contact-text a {
@@ -157,7 +158,7 @@ form {
 h3 {
     font-family: 'oxygen', sans-serif;
     font-size: 1.5rem;
-    margin-top: 50px;
+/*     margin-top: 50px; */
     margin-bottom: 20px;
 }
 
@@ -245,6 +246,10 @@ footer a:hover {
         background-color: white;
         width: 100%;
         border-bottom: 1px solid black;
+    }
+
+    .contact-text {
+        margin-top: 180px;
     }
 
     .index-body .navigation {
