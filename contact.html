@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="contact-html" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,60 +17,62 @@
 
     <!-- JS -->
     <script src="vendor/jquery.js"></script>
-    <script src="app.js"></script>
 
     <title>Ackerman Design Studio</title>
 </head>
 <body class="contact-body">
-    <div class="logo logo-white">
-        <h1>Ackerman<br>Design<br>Studio</h1>
-    </div>
-    <div class="navigation">
-            <a id="contact-return-link" href="index.html">home</a>
-    </div>
+    <div class="row">
+        <div class="col-3">
+            <div class="logo navigation dark">
+                <h1>Ackerman<br>Design<br>Studio</h1>
+                <a href="index.html">home</a>
+            </div>
+
+        </div>
+
+        <div class="col-3">
+            <div class="row column-row">
+                <div class="col-6">
+                    <article class="contact-text">
+                        <p>Brooklyn, NY 11205<br>
+                        <a href="tel:904-571-9002">904-571-9002</a><br>
+                        <a href="mailto:admin@ackermandesignstudio.com?subject=Ackerman Design Studio - website inquiry">admin@ackermandesignstudio.com</a><br>
+                </div>
+                
+                <div class="col-6">
+                    <h3>contact ADS</h3>
+
+                
+                    <form id="my-form" action="https://formspree.io/f/xyylwgne" method="POST">
+                        <ul>
+                            <li>
+                                <input type="name" name="_name" class="form-text" placeholder="your name" required>
+                            </li>
+                            <li>
+                                <input type="email" name="_replyto" class="form-text" placeholder="your email" required>
+                            </li>
+                        </ul>
+                        <textarea name="message" placeholder="your message" required></textarea>
+                        <button type="submit" class="form-submit-button">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 centered">
+            <img class="desk-img" src="images/izzy_desk.jpg" alt="Ackerman Design Studio Workspace">
+        </div>
+        
     <!-- <article class="bio">
-        <p>Ackerman Design Studio has completed and consulted on design projects from coast to coast. Izzy Ackerman is a graduate of The George Washington University with a degree in Interior Design, and as worked for top designers in DC and NYC.</p>
+        <p>Izzy Ackerman is a graduate of The George Washington University with a degree in Interior Design, and as worked for top designers in Washington, DC and NYC.</p>
+        <p>Ackerman Design Studio was founded in DC in 2017. Since then, Izzy has executed and consulted on design projects from coast to coast. Now based in Brooklyn, ADS conitnues to grow.</p>
     </article> -->
-    <div class="contact-box hidden">
-        <h3>contact ADS</h3>
 
-        <div id="mdiv">
-            <div class="mdiv">
-            <div class="md"></div>
-        </div>
-        </div>
-        
-        <form id="my-form" action="https://formspree.io/f/xyylwgne" method="POST">
-            <ul>
-                <!-- <label></label> -->
-                <li>
-                    <input type="name" name="_name" class="form-text" placeholder="your name" required>
-                </li>
-                <!-- <label></label> -->
-                <li>
-                    <input type="email" name="_replyto" class="form-text" placeholder="your email" required>
-                </li>
-            </ul>
-            <!-- <label></label> -->
-            <textarea name="message" placeholder="your message" required></textarea>
-            <br>
-            <button type="submit" class="form-submit-button">Send</button>
-            </form>
-    </div>
-
-        <article class="contact-text">
-            <p>Brooklyn, NY 11205<br>
-            <a href="tel:904-571-9002">904-571-9002</a><br>
-            <a href="mailto:admin@ackermandesignstudio.com?subject=Ackerman Design Studio - website inquiry">admin@ackermandesignstudio.com</a><br>
-            <a class="contact-activate-button">Contact Form</a></p>
-        </article>
-        
-       
-        </div>
-        <footer>
+        <footer class="dark footer-border">
             <p>designed and maintained by <a href="https://www.benlurye.com/portfolio" target="_blank">Benjamin Lurye</a></p>
         </footer>
 
+        <script src="app.js"></script>
         <script>
             var form = document.getElementById("my-form");
             

@@ -38,7 +38,7 @@ $(document).ready(function() {
   $(window).on('resize scroll', function() {
     if ($('#about_anchor').isInViewport()) {
       $(".nav_logo").fadeIn(250);
-      console.log("hello")
+      // console.log("hello")
     } else if ($('#gallery').isInViewport()) {
       return;
     } else if ($('#guide').isInViewport()) {
