@@ -115,6 +115,7 @@
 }
 
 .column-row {
+    display: flex;
     flex-direction: column;
     height: 100vh;
     justify-content: space-evenly;
@@ -161,7 +162,6 @@
 }
 
 .desk-img {
-    margin-top: 50px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
