@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-.index-html, .index-body {
+.index-html, .index-body, .contact-body {
     overflow: hidden;
     height: 100%;
 }
